@@ -1,0 +1,142 @@
+*{
+  font-family: "tilt neon", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+}
+//HEADER INDEX
+    #index{
+        display: flex;
+        flex-flow: column nowrap;
+        #header-index{
+            display: flex;
+            flex-flow: column wrap;
+            #encabezado{
+                display: flex;
+                width: 100%;
+                align-items: center;
+                column-gap:2vh;
+                padding: .5rem;
+                background-color: rgb(75, 105, 105);
+                transition: .5s;
+                img{
+                  scale: 1;
+                  border: solid black 2px;
+                }
+                h1{
+                  @include titulos-style(3.5rem)
+                }
+                }
+            
+            #nav-principal{
+                ul{
+                    background-color: azure;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    column-gap: 3vw;
+                    list-style: none;
+                }
+                a{
+                    color: rgb(104, 104, 104);
+                    text-decoration: none;
+                }
+            }
+            #reproductor{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: .5vh;
+                column-gap: .25rem;
+                scale: .7;
+                #botones{
+                    background-color: black;
+                    border: gray solid;
+                    padding: .125rem 1rem;
+                    border-radius: .5rem;
+                  }
+                  #reproduciendo{
+                    background-color: bisque;
+                    border: black solid;
+                    padding: .125rem;
+                  }
+            }
+        }
+//MAIN INDEX
+          #imagen-principal{
+            position: relative;
+            height: 20rem;
+            width: 45rem;
+            margin: 0 auto;
+            transition: .5s;
+            img{
+                width: 100%;
+                height: 100%;
+                &:hover{
+                    filter: blur(3px);
+                }
+              }
+              #titulo-principal{
+                display: flex;
+                position: absolute;
+                bottom: 0;
+                justify-content: center;
+                width: 100%;
+                transition: .3s ;
+                @include titulos-style(2rem)
+              }
+              &:hover{
+                #titulo-principal{
+                    bottom:80%;
+                    font-size: 200%;
+                    color:rgb(137, 132, 132);
+                    text-shadow: 5px .5px 1px rgb(6, 6, 6);
+                  }
+                 #descripcion-principal{
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    text-shadow: 1px 0 1px rgb(6, 6, 6);
+                    @include titulos-style(1.15rem)
+
+                  }
+                }
+                #descripcion-principal{
+                    display: none;
+                    position: absolute;
+                    bottom: 40%;
+                     width: 80%;
+                     margin: auto 10%;
+                     color:rgb(43, 34, 34);
+                     text-shadow: .4px .4px 15px rgb(6, 6, 6);
+                     transition: .60s;
+                   }
+              }
+//FOOTER INDEX 
+              #footer-principal{
+                display: flex;
+                column-gap: 1rem;
+                justify-content:center;
+                a{
+                  text-decoration: none;
+                  
+                }
+
+              }
+            }
+
+    @media screen and (max-width: $breakpoint){
+      #encabezado{
+        justify-content: center;
+        transition: 1.5s;
+      }
+      #imagen-principal{
+        height: 20rem;
+        width: 25rem;
+        transition: .5s;
+      }
+    #footer-principal{
+      display: flex;
+      justify-content: space-around;
+    }
+  }

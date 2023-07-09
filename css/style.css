@@ -1,0 +1,137 @@
+* {
+  font-family: "tilt neon", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+#index {
+  display: flex;
+  flex-flow: column nowrap;
+}
+#index #header-index {
+  display: flex;
+  flex-flow: column wrap;
+}
+#index #header-index #encabezado {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  column-gap: 2vh;
+  padding: 0.5rem;
+  background-color: rgb(75, 105, 105);
+  transition: 0.5s;
+}
+#index #header-index #encabezado img {
+  scale: 1;
+  border: solid black 2px;
+}
+#index #header-index #encabezado h1 {
+  font-family: "fasthand", Arial, Helvetica, sans-serif;
+  font-size: 3.5rem;
+}
+#index #header-index #nav-principal ul {
+  background-color: azure;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  column-gap: 3vw;
+  list-style: none;
+}
+#index #header-index #nav-principal a {
+  color: rgb(104, 104, 104);
+  text-decoration: none;
+}
+#index #header-index #reproductor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5vh;
+  column-gap: 0.25rem;
+  scale: 0.7;
+}
+#index #header-index #reproductor #botones {
+  background-color: black;
+  border: gray solid;
+  padding: 0.125rem 1rem;
+  border-radius: 0.5rem;
+}
+#index #header-index #reproductor #reproduciendo {
+  background-color: bisque;
+  border: black solid;
+  padding: 0.125rem;
+}
+#index #imagen-principal {
+  position: relative;
+  height: 20rem;
+  width: 45rem;
+  margin: 0 auto;
+  transition: 0.5s;
+}
+#index #imagen-principal img {
+  width: 100%;
+  height: 100%;
+}
+#index #imagen-principal img:hover {
+  filter: blur(3px);
+}
+#index #imagen-principal #titulo-principal {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
+  width: 100%;
+  transition: 0.3s;
+  font-family: "fasthand", Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+}
+#index #imagen-principal:hover #titulo-principal {
+  bottom: 80%;
+  font-size: 200%;
+  color: rgb(137, 132, 132);
+  text-shadow: 5px 0.5px 1px rgb(6, 6, 6);
+}
+#index #imagen-principal:hover #descripcion-principal {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 1px 0 1px rgb(6, 6, 6);
+  font-family: "fasthand", Arial, Helvetica, sans-serif;
+  font-size: 1.15rem;
+}
+#index #imagen-principal #descripcion-principal {
+  display: none;
+  position: absolute;
+  bottom: 40%;
+  width: 80%;
+  margin: auto 10%;
+  color: rgb(43, 34, 34);
+  text-shadow: 0.4px 0.4px 15px rgb(6, 6, 6);
+  transition: 0.6s;
+}
+#index #footer-principal {
+  display: flex;
+  column-gap: 1rem;
+  justify-content: center;
+}
+#index #footer-principal a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  #encabezado {
+    justify-content: center;
+    transition: 1.5s;
+  }
+  #imagen-principal {
+    height: 20rem;
+    width: 25rem;
+    transition: 0.5s;
+  }
+  #footer-principal {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
