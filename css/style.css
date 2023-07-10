@@ -15,7 +15,6 @@
 }
 #index #header-index #encabezado {
   display: flex;
-  width: 100%;
   align-items: center;
   column-gap: 2vh;
   padding: 0.5rem;
@@ -28,7 +27,7 @@
 }
 #index #header-index #encabezado h1 {
   font-family: "fasthand", Arial, Helvetica, sans-serif;
-  font-size: 3.5rem;
+  font-size: 4rem;
 }
 #index #header-index #nav-principal ul {
   background-color: azure;
@@ -124,7 +123,7 @@
     transition: 1.5s;
   }
   #imagen-principal {
-    height: 20rem;
+    height: 10rem;
     width: 25rem;
     transition: 0.5s;
   }
@@ -132,6 +131,106 @@
     display: flex;
     justify-content: space-around;
   }
+}
+#contactanos header nav ul {
+  background-color: azure;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  column-gap: 3vw;
+  list-style: none;
+}
+#contactanos header nav a {
+  color: rgb(104, 104, 104);
+  text-decoration: none;
+}
+#contactanos main form {
+  width: 80vw;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-areas: "nombre mensaje imagen" "correo mensaje imagen" "ciudad motivo enviar";
+  background-color: rgb(104, 104, 104);
+  margin: 10vh auto;
+  border: solid black;
+}
+#contactanos main form input {
+  border: solid black;
+  text-align: center;
+  background-color: azure;
+}
+#contactanos main form #nombre {
+  grid-area: nombre;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contactanos main form #nombre input {
+  height: 1.5rem;
+  width: 95%;
+}
+#contactanos main form #correo-electronico {
+  grid-area: correo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contactanos main form #correo-electronico input {
+  height: 1.5rem;
+  width: 95%;
+}
+#contactanos main form #localidad {
+  grid-area: ciudad;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contactanos main form #localidad input {
+  height: 1.5rem;
+  width: 95%;
+}
+#contactanos main form #mensaje {
+  grid-area: mensaje;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contactanos main form #mensaje input {
+  height: 90%;
+  width: 90%;
+}
+#contactanos main form #motivo {
+  grid-area: motivo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contactanos main form #motivo input {
+  height: 1.5rem;
+  width: 95%;
+}
+#contactanos main form #imagen {
+  grid-area: imagen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contactanos main form #imagen input {
+  height: 1.5rem;
+  width: 95%;
+}
+#contactanos main form #enviar-formulario {
+  grid-area: enviar;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contactanos main form #enviar-formulario input {
+  height: 2rem;
+  width: 50%;
+}
+#contactanos footer {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

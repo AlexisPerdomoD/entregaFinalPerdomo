@@ -1,0 +1,65 @@
+@import "./variables.scss";
+@import './mixin-and-extend.scss';
+#contactanos{
+    header{
+        nav{
+          @include nav-style
+        }
+      }
+      main{ 
+            form{
+                width: 80vw;
+            height: 70vh;
+            display: grid;
+            grid-template-columns: 25% 50% 25%;
+            grid-template-areas: 
+            "nombre mensaje imagen"
+            "correo mensaje imagen"
+            "ciudad motivo enviar";
+            background-color:$color-secundario;
+            margin: 10vh auto;
+            border: solid black;
+            input{
+                border: solid black;
+                text-align: center;
+                background-color: $color-secundari02;
+            }
+            #nombre{
+                grid-area: nombre;
+                @include contactos-elem-style;
+            }
+            #correo-electronico{
+                grid-area:correo;
+                @include contactos-elem-style;
+                
+            }
+            #localidad{
+                grid-area: ciudad;
+                @include contactos-elem-style;
+            }
+            #mensaje{
+                grid-area: mensaje;
+                @include contactos-elem-style(90%,90%);
+            }
+            #motivo{
+                grid-area: motivo;
+                @include contactos-elem-style;
+            }
+            #imagen{
+                grid-area: imagen;
+                @include contactos-elem-style;
+            }
+            #enviar-formulario{
+                grid-area: enviar;
+                @include contactos-elem-style(2rem,50%);
+            }   
+            
+        }
+        
+    }
+    footer{
+        text-align: center;
+    }
+}
+
+

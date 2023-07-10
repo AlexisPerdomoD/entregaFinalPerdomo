@@ -4,6 +4,8 @@
   padding: 0;
   margin: 0;
 }
+@import "./mixin-and-extend.scss";
+@import "./variables.scss";
 //HEADER INDEX
     #index{
         display: flex;
@@ -13,7 +15,6 @@
             flex-flow: column wrap;
             #encabezado{
                 display: flex;
-                width: 100%;
                 align-items: center;
                 column-gap:2vh;
                 padding: .5rem;
@@ -24,7 +25,7 @@
                   border: solid black 2px;
                 }
                 h1{
-                  @include titulos-style(3.5rem)
+                  @include titulos-style(4rem);
                 }
                 }
             
@@ -131,7 +132,7 @@
         transition: 1.5s;
       }
       #imagen-principal{
-        height: 20rem;
+        height: 10rem;
         width: 25rem;
         transition: .5s;
       }

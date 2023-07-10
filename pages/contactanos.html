@@ -5,12 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>contactanos</title>
-  <link rel="stylesheet" href="/css/">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
+<body id="contactanos">
   <header>
-    <nav id="nav-principal">
+    <nav>
       <ul>
         <li>
           <a href="/index.html">
@@ -42,27 +42,43 @@
       </ul>
     </nav>
   </header>
-  <main id="formulario-container">
+  <main>
     <form action="" method="get">
-      <div id="formulario-datos">
+      <div id="nombre">
         <input type="text" required placeholder="nombre">
+      </div>
+       <div id="correo-electronico">
         <input type="text" required placeholder="correo electronico">
-        <input type="text" required placeholder="codigo">
-        <input type="text" required placeholder="ciudad">
-        <div id="localidad-motivacion">
-          <input type="number" required id="codigo-postal"placeholder="codigo postal">
-          <select id="motivo" >
-            <option value="opcion1">motivo1</option>
-            <option value="opcion2">motivo2</option>
-            <option value="opcion3">motivo3</option>
+       </div>
+        <div id="mensaje">
+          <input type="text"  value="" placeholder="mensaje" >
+        </div>
+        <div id="motivo">
+          <select >
+            <option value="opcion1">
+              motivo1
+            </option>
+            <option value="opcion2">
+              motivo2
+            </option>
+            <option value="opcion3">
+              motivo3
+            </option>
           </select>
         </div>
+       
+        <div id="imagen">
+          <img  src="" alt="culo">
         </div>
-        <div id="mensaje-enviar">
-          <input type="text"  value="" placeholder="mensaje" id="mensaje">
-          <input type="submit" id="enviar-formulario" value="enviar">
+        
+        <div id="localidad">
+          <input id="ciudad" type="text" required placeholder="ciudad">
+          <input type="number" required id="codigo-postal"placeholder="codigo postal">
         </div>
-      </div>
+        <div id="enviar-formulario">
+          <input type="submit" value="enviar">
+        </div>
+          
     </form>
    </main>
    <footer>

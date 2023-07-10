@@ -2,3 +2,30 @@
   font-family: "fasthand",Arial, Helvetica, sans-serif;
   font-size: $escala;
 }
+
+
+// bloques 
+@mixin nav-style{
+  ul{
+    background-color: azure;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    column-gap: 3vw;
+    list-style: none;
+  }
+  a{
+    color: rgb(104, 104, 104);
+    text-decoration: none;
+  }
+};
+
+@mixin contactos-elem-style($height:1.5rem,$width:95%){
+  display: flex; 
+                justify-content: center;
+                align-items: center;
+                input{
+                    height: $height;
+                    width: $width;
+                }
+}

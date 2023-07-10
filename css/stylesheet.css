@@ -1,92 +1,89 @@
 /*PAGINA PRINCIPAL*/
-*{
-  font-size:1rem ;
+* {
+  font-size: 1rem;
   padding: 0;
   margin: 0;
 }
-body{
-  min-width:1000px;
 
+body {
+  min-width: 1000px;
 }
+
 /*ENCABEZADO PAGINA PRINCIPAL*/
-#header-index{
-
-  overflow:hidden ;
-
+#header-index {
+  overflow: hidden;
 }
-#encabezado{
+
+#encabezado {
   position: relative;
   height: 15vh;
-  margin: 0 .5%;
+  margin: 0 0.5%;
   padding: 0.5%;
   border: black solid;
   overflow: hidden;
-  
-  
-
 }
-#encabezado img{
-  
+
+#encabezado img {
   display: inline-block;
   height: 15vh;
   margin-right: 5vh;
-  
-  
 }
-#encabezado h1{
+
+#encabezado h1 {
   display: inline-block;
   position: absolute;
   top: 10%;
-
   font-size: 4rem;
-   
 }
+
 /*BARRA DE NAVEGACION PAGINA HEADER*/
-#nav-principal{
+#nav-principal {
   text-align: center;
-  
   background-color: aliceblue;
   height: 5vh;
   border: black solid;
-  margin: .5vh 20vw;
+  margin: 0.5vh 20vw;
   border-radius: 10vw;
 }
-#nav-principal li{
+
+#nav-principal li {
   display: inline-block;
-  margin: .5vw;
-}
-#nav-principal a{
-  text-decoration: none;
-  color: #000;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0.5vw;
 }
 
-#header-index #reproductor{
-text-align: center;
+#nav-principal a {
+  text-decoration: none;
+  color: #000;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-#reproductor{
+
+#header-index #reproductor {
+  text-align: center;
+}
+
+#reproductor {
   display: inline-block;
   width: 40vw;
   margin: 1px 30vw 3vh 30vw;
   height: 5vh;
-  
 }
 
-#reproductor #reproduciendo{
+#reproductor #reproduciendo {
   display: inline-block;
-  
   background-color: bisque;
-  padding: 1vh  1vw;
+  padding: 1vh 1vw;
   border: solid black;
 }
-#reproductor #botones{
+
+#reproductor #botones {
   display: inline-block;
   background-color: #fff;
-  padding: 1vh  1vw;
+  padding: 1vh 1vw;
   border: solid black;
 }
+
 /*MAIN PAGINA PRINCIPAL*/
-#imagen-principal{
+#imagen-principal {
   position: relative;
   background-color: black;
   height: 60vh;
@@ -94,206 +91,211 @@ text-align: center;
   margin: 0 auto;
   border: black solid;
 }
-#imagen-principal img{
 
+#imagen-principal img {
   width: 50vw;
   height: 60vh;
 }
-#titulo-principal{
+
+#titulo-principal {
   position: absolute;
   display: inline-block;
   text-align: center;
   width: 30vw;
   bottom: 0;
   margin-left: 0;
-  transition: .3s ;
+  transition: 0.3s;
 }
-#descripcion-principal{
- display: none;
 
+#descripcion-principal {
+  display: none;
   text-align: center;
   width: 40vw;
   position: absolute;
   color: rgb(245, 17, 17);
   text-shadow: 5px 2px 2px seagreen;
-  transition: .60s;
+  transition: 0.6s;
   bottom: 0;
 }
-#imagen-principal:hover img{
+
+#imagen-principal:hover img {
   opacity: 0.7;
 }
+
 #imagen-principal:hover #titulo-principal {
-  bottom:45vh;
+  bottom: 45vh;
   margin-left: 10vw;
   font-size: 1.5rem;
   color: rgb(245, 17, 17);
   text-shadow: 5px 2px 2px seagreen;
 }
-#imagen-principal:hover #descripcion-principal{
+
+#imagen-principal:hover #descripcion-principal {
   display: inline;
   bottom: 15vh;
-  
-  margin-left:5vw;
+  margin-left: 5vw;
 }
-
 
 /*FOOTER PAGINA PRINCIPAL*/
 #footer-principal {
   text-align: center;
   text-decoration: none;
 }
-#footer-principal a{
+
+#footer-principal a {
   text-align: center;
   text-decoration: none;
   color: #000;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-#footer-principal a:hover{
-background-color: antiquewhite;
-border-radius: 5%;
+
+#footer-principal a:hover {
+  background-color: antiquewhite;
+  border-radius: 5%;
 }
 
 /*CONTACTANOS PAGINA*/
-
-#volver-contactanos{
+#volver-contactanos {
   margin: 1vw;
 }
 
-#formulario-container{
+#formulario-container {
   width: 80vw;
   height: 70vh;
-  background-color:bisque;
+  background-color: bisque;
   margin: 0 auto;
   border: solid black;
 }
-#formulario-container input{
+
+#formulario-container input {
   border: solid black;
   text-align: center;
- 
 }
-#formulario-datos{
+
+#formulario-datos {
   display: inline-block;
   width: 30%;
   height: 70vh;
   vertical-align: top;
   text-align: center;
   margin: 10vh 2.5vw 0;
-  
-
 }
-#formulario-datos input{
+
+#formulario-datos input {
   display: inline-block;
   margin: 1vh 0;
   height: 5vh;
   width: 100%;
-  
 }
+
 #localidad-motivacion {
   display: block;
 }
-#localidad-motivacion input{
-  display: inline-block; 
+
+#localidad-motivacion input {
+  display: inline-block;
 }
-#codigo-postal{
+
+#codigo-postal {
   width: 10vw;
 }
-#mensaje-enviar{
-  position:relative;
+
+#mensaje-enviar {
+  position: relative;
   display: inline-block;
   width: 63%;
-  
   height: 70vh;
   margin: 0;
-  
 }
-#mensaje-enviar input[type="submit"]{
-position: absolute;
-right: 1vw;
-bottom: 1vw; 
+
+#mensaje-enviar input[type=submit] {
+  position: absolute;
+  right: 1vw;
+  bottom: 1vw;
 }
-#mensaje{
+
+#mensaje {
   width: 90%;
   max-width: 1000px;
   height: 55vh;
   max-height: 500px;
   display: block;
-  margin: 5vh auto 0 ;
- 
+  margin: 5vh auto 0;
 }
-#mensaje-enviar #enviar-formulario{
-  display: inline-block;
 
+#mensaje-enviar #enviar-formulario {
+  display: inline-block;
 }
 
 /*WORLD TOUR MONTECANO 2025*/
-
-#header-tour-mundial{
+#header-tour-mundial {
   margin: 1vh 1vw;
   border: solid black;
   height: 18vh;
   min-height: 50px;
   overflow: hidden;
 }
-#header-tour-mundial h1{
+
+#header-tour-mundial h1 {
   text-align: center;
   font-size: 2rem;
   margin-top: 5vh;
 }
+
 #header-tour-mundial nav {
   text-align: center;
 }
-#header-tour-mundial nav  li{
+
+#header-tour-mundial nav li {
   display: inline-block;
   margin: 2vh 1vw 0;
-
 }
-#header-tour-mundial nav li  a {
+
+#header-tour-mundial nav li a {
   text-decoration: none;
   color: gray;
 }
-#tour-mundial{
+
+#tour-mundial {
   border: #000 solid 1px;
-  margin: 0 .5vw;
+  margin: 0 0.5vw;
   height: 78vh;
   position: relative;
-
 }
 
-.informacion-secundaria:not(.tour-default){
+.informacion-secundaria:not(.tour-default) {
   display: none;
   width: 40%;
-  
 }
 
-#lista-tour-mundial{
+#lista-tour-mundial {
   position: absolute;
   top: 20vh;
   left: 0;
   display: inline-block;
   height: 54vh;
   width: 40%;
-  margin: 2vh 0 ;
+  margin: 2vh 0;
   background-color: beige;
 }
-#lista-tour-mundial li{
-  display: block;
 
+#lista-tour-mundial li {
+  display: block;
   text-decoration: none;
   border: #000 solid;
   width: 95%;
- height: 5vh;
-  margin: .25vh auto;
+  height: 5vh;
+  margin: 0.25vh auto;
   padding-top: 2vh;
   text-align: center;
   font-size: larger;
-  
 }
-#lista-tour-mundial li:hover{
+
+#lista-tour-mundial li:hover {
   background-color: rgba(128, 128, 128, 0.378);
 }
 
-
-.informacion-tour{
+.informacion-tour {
   position: absolute;
   top: 0;
   right: 0;
@@ -302,52 +304,56 @@ bottom: 1vw;
   background-color: aqua;
   height: 78vh;
 }
-.informacion-tour:not(.tour-default){
+
+.informacion-tour:not(.tour-default) {
   display: none;
 }
-/*PAGINA DE EXPERIENCIAS DE USUARIO*/
 
-#header-experiencia-de-fans{
+/*PAGINA DE EXPERIENCIAS DE USUARIO*/
+#header-experiencia-de-fans {
   height: 18vh;
   border: black solid;
   margin: 1vh 1vw;
   text-align: center;
-  
 }
 
-#header-experiencia-de-fans h1{
+#header-experiencia-de-fans h1 {
   font-size: 3rem;
   padding-top: 2vh;
 }
+
 #header-experiencia-de-fans nav {
   text-align: center;
 }
-#header-experiencia-de-fans nav  li{
+
+#header-experiencia-de-fans nav li {
   display: inline-block;
   margin: 2vh 1vw 0;
-
 }
-#header-experiencia-de-fans nav li  a {
+
+#header-experiencia-de-fans nav li a {
   text-decoration: none;
   color: gray;
 }
 
-#main-experiencia-de-fans{
+#main-experiencia-de-fans {
   height: 62vh;
   width: 70vw;
   margin: 0 auto 1vh;
   border: solid black;
-  padding-top: .5vh;
+  padding-top: 0.5vh;
 }
-.comentario-experiencia{
+
+.comentario-experiencia {
   height: 11vh;
   width: 95%;
-  margin: .5vh auto;
+  margin: 0.5vh auto;
   border: solid black;
   text-align: justify;
   padding: 0 1vw;
 }
-#formulario-comentario-nuevo{
+
+#formulario-comentario-nuevo {
   position: relative;
   height: 12vh;
   width: 80vw;
@@ -356,32 +362,37 @@ bottom: 1vw;
   border: solid black;
   padding: 1vh 1vw;
 }
-#formulario-comentario-nuevo input[type="text"]{
+
+#formulario-comentario-nuevo input[type=text] {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border: solid black 1px;
   text-align: center;
 }
-#formulario-informacion-complementaria input{
-  margin-bottom: .1vh;
-  font-size: .75rem;
+
+#formulario-informacion-complementaria input {
+  margin-bottom: 0.1vh;
+  font-size: 0.75rem;
 }
+
 #comentario-nuevo {
   width: 55vw;
   height: 8vh;
   border: solid black 3px;
 }
- #cargar-enviar{
+
+#cargar-enviar {
   display: inline-block;
   position: absolute;
   bottom: 1.2vh;
   right: 1vw;
 }
-#cargar-enviar input{
+
+#cargar-enviar input {
   margin: auto 0vw auto 1vw;
 }
 
 /*GALERIA*/
-#imagen-actual{
+#imagen-actual {
   max-height: 55vh;
   max-width: 40vw;
   margin: 0 auto 0;
@@ -389,57 +400,69 @@ bottom: 1vw;
   border: black solid;
   position: relative;
 }
-#imagen-actual img{
+
+#imagen-actual img {
   width: 100%;
   height: 55vh;
 }
-#imagen-actual figcaption{
+
+#imagen-actual figcaption {
   position: absolute;
-  right: .25vw;
-  bottom: .5vh;
+  right: 0.25vw;
+  bottom: 0.5vh;
 }
 
-#galeria-subcarpetas{
+#galeria-subcarpetas {
   width: 55vw;
   height: 12vh;
   background-color: aquamarine;
   border: black solid;
   margin: 1vh auto;
   text-align: center;
-border-radius: 2.5vw
+  border-radius: 2.5vw;
 }
-#galeria-subcarpetas li{
+
+#galeria-subcarpetas li {
   display: inline-block;
   background-color: black;
   width: 8vw;
   height: 10vh;
   border: black solid;
-  margin: 1vh .5vw;
+  margin: 1vh 0.5vw;
 }
-#galeria-subcarpetas  img{
+
+#galeria-subcarpetas img {
   width: 100%;
   height: 100%;
-  
 }
-#galeria-subcarpetas  img:hover{
+
+#galeria-subcarpetas img:hover {
   opacity: 50%;
 }
-#galeria-container{
+
+#galeria-container {
   margin: 0 auto;
   text-align: center;
 }
-#galeria-container img{
+
+#galeria-container img {
   display: inline-block;
   height: 20vh;
   width: 15vw;
-  margin: .5vh 1vw;
+  margin: 0.5vh 1vw;
   border: solid black;
 }
-#mostrar-mas-button{
+
+#mostrar-mas-button {
   display: block;
- margin: 0 auto;
- text-align: center
-}
-#footer-galeria{
+  margin: 0 auto;
   text-align: center;
 }
+
+#footer-galeria {
+  text-align: center;
+}
+
+
+
+/*# sourceMappingURL=stylesheet.css.map */
