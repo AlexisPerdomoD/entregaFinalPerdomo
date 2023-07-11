@@ -233,4 +233,87 @@
   text-align: center;
 }
 
+#tour-mundial header h1 {
+  font-family: "fasthand", Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  background-color: rgb(75, 105, 105);
+}
+#tour-mundial header nav ul {
+  background-color: azure;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  column-gap: 3vw;
+  list-style: none;
+}
+#tour-mundial header nav a {
+  color: rgb(104, 104, 104);
+  text-decoration: none;
+}
+#tour-mundial main {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 18vw 76vw;
+  grid-template-rows: 28vh repeat(5, 9vh);
+  grid-template-areas: "side principal" "tokio principal" "korea principal" "francia principal" "alemania principal" "venezuela principal";
+  row-gap: 0.5vh;
+  column-gap: 2vw;
+}
+#tour-mundial main .informacion-secundaria {
+  grid-area: side;
+  display: none;
+  background-color: azure;
+  text-align: center;
+  border: solid black;
+}
+#tour-mundial main .tour-default {
+  display: inline-block;
+  background-color: rgb(104, 104, 104);
+  text-align: center;
+  border: solid black;
+}
+#tour-mundial main span {
+  display: flex;
+  background-color: rgb(104, 104, 104);
+  border: solid black;
+  align-items: center;
+  justify-content: center;
+}
+#tour-mundial main .tokio {
+  grid-area: tokio;
+}
+#tour-mundial main #e-lista-korea {
+  grid-area: korea;
+}
+#tour-mundial main #e-lista-korea:hover {
+  scale: 1.01;
+  transition: 0.1s;
+}
+#tour-mundial main #e-lista-korea:hover {
+  display: flex;
+}
+#tour-mundial main #e-lista-francia {
+  grid-area: francia;
+}
+#tour-mundial main #e-lista-alemania {
+  grid-area: alemania;
+}
+#tour-mundial main #e-lista-venezuela {
+  grid-area: venezuela;
+}
+#tour-mundial main .informacion-tour {
+  grid-area: principal;
+  display: none;
+}
+#tour-mundial main .tour-default {
+  display: inline-block;
+  background-color: rgb(104, 104, 104);
+  text-align: center;
+  border: solid black;
+}
+#tour-mundial footer {
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */
