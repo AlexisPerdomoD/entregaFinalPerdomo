@@ -1,0 +1,98 @@
+#galeria{
+  background-color: $color-secundario3;
+  header{
+    nav{
+      @include nav-style;
+    }
+  }
+  main{
+    display: grid;
+    grid-template-columns: 90vw;
+    grid-template-rows: 50vh 10vh 40vh;
+    grid-template-areas: 
+    "imagen-actual"
+    "imagen-actual-nav"
+    "container-galeria";
+    row-gap: 2vh;
+    justify-content: center;
+      #imagen-actual{
+        grid-area: imagen-actual;
+        display: flex;
+        position: relative;
+        justify-content: center ;
+        img{
+          @include estilo-bordes(.25rem);
+          width: 50vw;
+          height: 50vh;
+        }
+        #ampliar-boton{
+          position: absolute;
+          bottom: 1vh;
+          left:63vw;
+          &:hover{
+            input{
+            @include animacion-botones(.85);
+            @include estilo-bordes(100%);
+            height: 5vw;
+            transition: 1s;
+            }
+          }
+          input{
+            width: 7vw;
+            scale: .75;
+            opacity: .50;
+            color: $color-secundario3;
+            background-color: $color-principal;
+            padding: 5%;
+            @include estilo-bordes(1rem);
+            
+          }
+        } 
+      }
+      #galeria-subcarpetas{
+        grid-area: imagen-actual-nav;
+        width: 60%;
+        margin: 0 auto;
+        ul{
+          display: flex;
+          justify-content:center;
+          align-content: center;
+          gap: 2vw;
+          background-color: $color-secundario2;
+          padding: 0 1vw;
+          @include estilo-bordes(3rem);
+          li{
+            list-style: none;
+            padding: 1vh 0;
+            img{
+              @include estilo-bordes(100%);
+              height: 2.5rem;
+              vertical-align: middle;
+              &:hover{
+                @include animacion-botones(1.10)
+              }
+            }
+          }
+        }
+      }
+      #galeria-container{
+        grid-area: container-galeria;
+        display: flex;
+        flex-flow: row wrap;
+        column-gap: 1vw;
+        row-gap: 1vh;
+        justify-content: center;
+      
+        width: 100%;
+        img{
+          @include estilo-bordes(.5rem);
+          width: 7vw;
+          height: 7vw;
+        
+        }
+      }
+  }
+  footer{
+    text-align: center;
+  }
+}

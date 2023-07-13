@@ -2,12 +2,22 @@
   font-family: "fasthand",Arial, Helvetica, sans-serif;
   font-size: $escala;
 }
+@mixin animacion-botones($escala:1.05){
+  scale:$escala;
+  opacity: .75;
+  background-color: $color-secundario;
+  transition: all .3s;
+}
+@mixin estilo-bordes($radio:0){
+  border: solid black 2px;
+  border-radius:$radio;
+}
 
 
 // bloques 
 @mixin nav-style{
   ul{
-    background-color: azure;
+    background-color:$color-secundario2;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
@@ -15,7 +25,7 @@
     list-style: none;
   }
   a{
-    color: rgb(104, 104, 104);
+    color:$color-secundario;
     text-decoration: none;
   }
 };

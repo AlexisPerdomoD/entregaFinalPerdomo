@@ -316,4 +316,114 @@
   text-align: center;
 }
 
+#galeria {
+  background-color: white;
+}
+#galeria header nav ul {
+  background-color: azure;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  column-gap: 3vw;
+  list-style: none;
+}
+#galeria header nav a {
+  color: rgb(104, 104, 104);
+  text-decoration: none;
+}
+#galeria main {
+  display: grid;
+  grid-template-columns: 90vw;
+  grid-template-rows: 50vh 10vh 40vh;
+  grid-template-areas: "imagen-actual" "imagen-actual-nav" "container-galeria";
+  row-gap: 2vh;
+  justify-content: center;
+}
+#galeria main #imagen-actual {
+  grid-area: imagen-actual;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+#galeria main #imagen-actual img {
+  border: solid black 2px;
+  border-radius: 0.25rem;
+  width: 50vw;
+  height: 50vh;
+}
+#galeria main #imagen-actual #ampliar-boton {
+  position: absolute;
+  bottom: 1vh;
+  left: 63vw;
+}
+#galeria main #imagen-actual #ampliar-boton:hover input {
+  scale: 0.85;
+  opacity: 0.75;
+  background-color: rgb(104, 104, 104);
+  transition: all 0.3s;
+  border: solid black 2px;
+  border-radius: 100%;
+  height: 5vw;
+  transition: 1s;
+}
+#galeria main #imagen-actual #ampliar-boton input {
+  width: 7vw;
+  scale: 0.75;
+  opacity: 0.5;
+  color: white;
+  background-color: rgb(75, 105, 105);
+  padding: 5%;
+  border: solid black 2px;
+  border-radius: 1rem;
+}
+#galeria main #galeria-subcarpetas {
+  grid-area: imagen-actual-nav;
+  width: 60%;
+  margin: 0 auto;
+}
+#galeria main #galeria-subcarpetas ul {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 2vw;
+  background-color: azure;
+  padding: 0 1vw;
+  border: solid black 2px;
+  border-radius: 3rem;
+}
+#galeria main #galeria-subcarpetas ul li {
+  list-style: none;
+  padding: 1vh 0;
+}
+#galeria main #galeria-subcarpetas ul li img {
+  border: solid black 2px;
+  border-radius: 100%;
+  height: 2.5rem;
+  vertical-align: middle;
+}
+#galeria main #galeria-subcarpetas ul li img:hover {
+  scale: 1.1;
+  opacity: 0.75;
+  background-color: rgb(104, 104, 104);
+  transition: all 0.3s;
+}
+#galeria main #galeria-container {
+  grid-area: container-galeria;
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 1vw;
+  row-gap: 1vh;
+  justify-content: center;
+  width: 100%;
+}
+#galeria main #galeria-container img {
+  border: solid black 2px;
+  border-radius: 0.5rem;
+  width: 7vw;
+  height: 7vw;
+}
+#galeria footer {
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */
