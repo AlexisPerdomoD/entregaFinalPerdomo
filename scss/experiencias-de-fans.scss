@@ -1,0 +1,14 @@
+#experiencias-de-fans{
+  background-color: $color-secundario3;
+  header{
+    h1{
+      @include titulos-style(4rem);
+      text-align: center;
+      background-color: $color-principal;
+    }
+    nav{
+      @include nav-style;
+    }
+
+  }
+}

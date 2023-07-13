@@ -426,4 +426,26 @@
   text-align: center;
 }
 
+#experiencias-de-fans {
+  background-color: white;
+}
+#experiencias-de-fans header h1 {
+  font-family: "fasthand", Arial, Helvetica, sans-serif;
+  font-size: 4rem;
+  text-align: center;
+  background-color: rgb(75, 105, 105);
+}
+#experiencias-de-fans header nav ul {
+  background-color: azure;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  column-gap: 3vw;
+  list-style: none;
+}
+#experiencias-de-fans header nav a {
+  color: rgb(104, 104, 104);
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=style.css.map */
