@@ -12,7 +12,22 @@
   border: solid black 2px;
   border-radius:$radio;
 }
-
+@mixin estilo-scrollbar{
+  &::-webkit-scrollbar{
+    width: .5rem;
+  }
+  &::-webkit-scrollbar-track{
+    background-color: $color-secundario;
+  }
+  &::-webkit-scrollbar-thumb{
+    background-color: $color-subtitulos;
+    border-radius: 1rem;
+  }
+}
+@mixin estilo-botones{
+  background-color: $color-secundario;
+  color: $color-secundario2;
+}
 
 // bloques 
 @mixin nav-style{
@@ -32,10 +47,10 @@
 
 @mixin contactos-elem-style($height:1.5rem,$width:95%){
   display: flex; 
-                justify-content: center;
-                align-items: center;
-                input{
-                    height: $height;
-                    width: $width;
-                }
+  justify-content: center;
+  align-items: center;
+  input{
+      height: $height;
+      width: $width;
+  }
 }

@@ -9,6 +9,71 @@
     nav{
       @include nav-style;
     }
-
   }
+  main{
+    #main-experiencia-de-fans{
+      display: flex;
+      flex-wrap: wrap;
+      width: 80vw;
+      height: 62.8vh;
+      overflow-y:scroll;
+      background-color: $color-secundario1;
+      margin: 0 auto;
+      padding: 0 1vw;
+      
+      @include estilo-scrollbar;
+      .comentario-experiencia{
+        @include estilo-bordes(.25rem);
+        width: 100%;
+        text-justify:newspaper;
+        margin: 0.5rem 0;
+        h3{
+          @include titulos-style(.75rem);
+          padding: 0 1vw;
+          color: $color-subtitulos;
+          background-color: $color-secundario3;
+        }
+        p{
+          background-color: $color-secundario2;
+          padding: 1vh 1vw;
+          font-size: .75rem;
+          color: $color-principal;
+        }
+      }
+
+    }
+    #formulario-comentario-nuevo{
+      background-color: $color-principal;
+      margin: 0 1vw;
+      padding: 1vh 1vw;
+      display: flex;
+      justify-content: space-between;
+      #informacion-complementaria{  
+        width: 19vw;
+        input{
+          width: 100%;
+          margin: .125vh 0;
+          text-align: center;
+          @include estilo-bordes(.25rem)
+        }
+         }
+      #comentario-nuevo{
+        width: 58vw;
+        margin: 0  1vw;
+        text-align: center;
+        @include estilo-bordes(.25rem)
+        }
+        #cargar-enviar{
+          width: 19vw;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: end;
+          background-color: blueviolet;
+          input{
+            width: 100%;
+            @include estilo-botones;
+          }
+        }
+      }
+    }
 }
