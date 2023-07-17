@@ -4,6 +4,16 @@
   padding: 0;
   margin: 0;
 }
+*::-webkit-scrollbar {
+  width: 0.5rem;
+}
+*::-webkit-scrollbar-track {
+  background-color: #795548;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #3E2723;
+  border-radius: 1rem;
+}
 
 #index {
   display: flex;
@@ -16,21 +26,23 @@
 #index #header-index #encabezado {
   display: flex;
   align-items: center;
-  column-gap: 2vh;
+  column-gap: 2vw;
   padding: 0.5rem;
-  background-color: rgb(75, 105, 105);
+  background-color: #4E342E;
   transition: 0.5s;
 }
 #index #header-index #encabezado img {
   scale: 1;
-  border: solid black 2px;
+  border: solid #BCAAA4;
+  border-radius: 100%;
 }
 #index #header-index #encabezado h1 {
   font-family: "fasthand", Arial, Helvetica, sans-serif;
   font-size: 4rem;
+  color: #264d49;
 }
 #index #header-index #nav-principal ul {
-  background-color: azure;
+  background-color: #D7CCC8;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -38,7 +50,7 @@
   list-style: none;
 }
 #index #header-index #nav-principal a {
-  color: rgb(104, 104, 104);
+  color: #795548;
   text-decoration: none;
 }
 #index #header-index #reproductor {
@@ -50,29 +62,32 @@
   scale: 0.7;
 }
 #index #header-index #reproductor #botones {
-  background-color: black;
-  border: gray solid;
+  background-color: #3E2723;
+  border: #BCAAA4 solid;
   padding: 0.125rem 1rem;
   border-radius: 0.5rem;
 }
 #index #header-index #reproductor #reproduciendo {
-  background-color: bisque;
-  border: black solid;
-  padding: 0.125rem;
+  background-color: #D7CCC8;
+  border: #8D6E63 solid;
+  padding: 0.25rem;
 }
 #index #imagen-principal {
   position: relative;
   height: 20rem;
-  width: 45rem;
+  width: 50rem;
   margin: 0 auto;
   transition: 0.5s;
+}
+#index #imagen-principal:hover img {
+  filter: blur(2px);
+  border-radius: 0.5rem;
+  opacity: 80%;
 }
 #index #imagen-principal img {
   width: 100%;
   height: 100%;
-}
-#index #imagen-principal img:hover {
-  filter: blur(3px);
+  background-color: #BCAAA4;
 }
 #index #imagen-principal #titulo-principal {
   display: flex;
@@ -82,30 +97,32 @@
   width: 100%;
   transition: 0.3s;
   font-family: "fasthand", Arial, Helvetica, sans-serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  color: #264d49;
 }
 #index #imagen-principal:hover #titulo-principal {
   bottom: 80%;
-  font-size: 200%;
-  color: rgb(137, 132, 132);
-  text-shadow: 5px 0.5px 1px rgb(6, 6, 6);
+  font-size: 2.5rem;
+  text-shadow: 1px 0.5px 1px #3E2723;
 }
 #index #imagen-principal:hover #descripcion-principal {
   display: flex;
   justify-content: center;
   text-align: center;
-  text-shadow: 1px 0 1px rgb(6, 6, 6);
+  text-shadow: 2px 1px 4px black;
+  font-weight: bold;
   font-family: "fasthand", Arial, Helvetica, sans-serif;
-  font-size: 1.15rem;
+  font-size: 1.7rem;
+  color: #264d49;
+  color: #1f1412;
 }
 #index #imagen-principal #descripcion-principal {
   display: none;
   position: absolute;
-  bottom: 40%;
+  bottom: 10%;
   width: 80%;
   margin: auto 10%;
-  color: rgb(43, 34, 34);
-  text-shadow: 0.4px 0.4px 15px rgb(6, 6, 6);
+  text-shadow: 4px 4px 5px rgb(6, 6, 6);
   transition: 0.6s;
 }
 #index #footer-principal {
@@ -115,6 +132,9 @@
 }
 #index #footer-principal a {
   text-decoration: none;
+}
+#index #footer-principal a img {
+  height: 1rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -133,7 +153,7 @@
   }
 }
 #contactanos header nav ul {
-  background-color: azure;
+  background-color: #D7CCC8;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -141,7 +161,7 @@
   list-style: none;
 }
 #contactanos header nav a {
-  color: rgb(104, 104, 104);
+  color: #795548;
   text-decoration: none;
 }
 #contactanos main form {
@@ -150,14 +170,14 @@
   display: grid;
   grid-template-columns: 25% 50% 25%;
   grid-template-areas: "nombre mensaje imagen" "correo mensaje imagen" "ciudad motivo enviar";
-  background-color: rgb(104, 104, 104);
+  background-color: #795548;
   margin: 10vh auto;
   border: solid black;
 }
 #contactanos main form input {
   border: solid black;
   text-align: center;
-  background-color: azure;
+  background-color: #D7CCC8;
 }
 #contactanos main form #nombre {
   grid-area: nombre;
@@ -236,11 +256,12 @@
 #tour-mundial header h1 {
   font-family: "fasthand", Arial, Helvetica, sans-serif;
   font-size: 3rem;
+  color: #264d49;
   text-align: center;
-  background-color: rgb(75, 105, 105);
+  background-color: #4E342E;
 }
 #tour-mundial header nav ul {
-  background-color: azure;
+  background-color: #D7CCC8;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -248,7 +269,7 @@
   list-style: none;
 }
 #tour-mundial header nav a {
-  color: rgb(104, 104, 104);
+  color: #795548;
   text-decoration: none;
 }
 #tour-mundial main {
@@ -263,19 +284,19 @@
 #tour-mundial main .informacion-secundaria {
   grid-area: side;
   display: none;
-  background-color: azure;
+  background-color: #D7CCC8;
   text-align: center;
   border: solid black;
 }
 #tour-mundial main .tour-default {
   display: inline-block;
-  background-color: rgb(104, 104, 104);
+  background-color: #795548;
   text-align: center;
   border: solid black;
 }
 #tour-mundial main span {
   display: flex;
-  background-color: rgb(104, 104, 104);
+  background-color: #795548;
   border: solid black;
   align-items: center;
   justify-content: center;
@@ -308,7 +329,7 @@
 }
 #tour-mundial main .tour-default {
   display: inline-block;
-  background-color: rgb(104, 104, 104);
+  background-color: #795548;
   text-align: center;
   border: solid black;
 }
@@ -317,10 +338,10 @@
 }
 
 #galeria {
-  background-color: white;
+  background-color: #BCAAA4;
 }
 #galeria header nav ul {
-  background-color: azure;
+  background-color: #D7CCC8;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -328,7 +349,7 @@
   list-style: none;
 }
 #galeria header nav a {
-  color: rgb(104, 104, 104);
+  color: #795548;
   text-decoration: none;
 }
 #galeria main {
@@ -359,7 +380,7 @@
 #galeria main #imagen-actual #ampliar-boton:hover input {
   scale: 0.85;
   opacity: 0.75;
-  background-color: rgb(104, 104, 104);
+  background-color: #795548;
   transition: all 0.3s;
   border: solid black 2px;
   border-radius: 100%;
@@ -370,8 +391,8 @@
   width: 7vw;
   scale: 0.75;
   opacity: 0.5;
-  color: white;
-  background-color: rgb(75, 105, 105);
+  color: #BCAAA4;
+  background-color: #4E342E;
   padding: 5%;
   border: solid black 2px;
   border-radius: 1rem;
@@ -386,7 +407,7 @@
   justify-content: center;
   align-content: center;
   gap: 2vw;
-  background-color: azure;
+  background-color: #D7CCC8;
   padding: 0 1vw;
   border: solid black 2px;
   border-radius: 3rem;
@@ -404,7 +425,7 @@
 #galeria main #galeria-subcarpetas ul li img:hover {
   scale: 1.1;
   opacity: 0.75;
-  background-color: rgb(104, 104, 104);
+  background-color: #795548;
   transition: all 0.3s;
 }
 #galeria main #galeria-container {
@@ -427,16 +448,17 @@
 }
 
 #experiencias-de-fans {
-  background-color: white;
+  background-color: #BCAAA4;
 }
 #experiencias-de-fans header h1 {
   font-family: "fasthand", Arial, Helvetica, sans-serif;
   font-size: 4rem;
+  color: #264d49;
   text-align: center;
-  background-color: rgb(75, 105, 105);
+  background-color: #4E342E;
 }
 #experiencias-de-fans header nav ul {
-  background-color: azure;
+  background-color: #D7CCC8;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -444,7 +466,7 @@
   list-style: none;
 }
 #experiencias-de-fans header nav a {
-  color: rgb(104, 104, 104);
+  color: #795548;
   text-decoration: none;
 }
 #experiencias-de-fans main #main-experiencia-de-fans {
@@ -453,7 +475,7 @@
   width: 80vw;
   height: 62.8vh;
   overflow-y: scroll;
-  background-color: rgb(113, 132, 136);
+  background-color: #8D6E63;
   margin: 0 auto;
   padding: 0 1vw;
 }
@@ -461,10 +483,10 @@
   width: 0.5rem;
 }
 #experiencias-de-fans main #main-experiencia-de-fans::-webkit-scrollbar-track {
-  background-color: rgb(104, 104, 104);
+  background-color: #795548;
 }
 #experiencias-de-fans main #main-experiencia-de-fans::-webkit-scrollbar-thumb {
-  background-color: black;
+  background-color: #3E2723;
   border-radius: 1rem;
 }
 #experiencias-de-fans main #main-experiencia-de-fans .comentario-experiencia {
@@ -477,18 +499,19 @@
 #experiencias-de-fans main #main-experiencia-de-fans .comentario-experiencia h3 {
   font-family: "fasthand", Arial, Helvetica, sans-serif;
   font-size: 0.75rem;
+  color: #264d49;
   padding: 0 1vw;
-  color: black;
-  background-color: white;
+  color: #3E2723;
+  background-color: #BCAAA4;
 }
 #experiencias-de-fans main #main-experiencia-de-fans .comentario-experiencia p {
-  background-color: azure;
+  background-color: #D7CCC8;
   padding: 1vh 1vw;
   font-size: 0.75rem;
-  color: rgb(75, 105, 105);
+  color: #4E342E;
 }
 #experiencias-de-fans main #formulario-comentario-nuevo {
-  background-color: rgb(75, 105, 105);
+  background-color: #4E342E;
   margin: 0 1vw;
   padding: 1vh 1vw;
   display: flex;
@@ -520,8 +543,8 @@
 }
 #experiencias-de-fans main #formulario-comentario-nuevo #cargar-enviar input {
   width: 100%;
-  background-color: rgb(104, 104, 104);
-  color: azure;
+  background-color: #795548;
+  color: #D7CCC8;
 }
 
 /*# sourceMappingURL=style.css.map */

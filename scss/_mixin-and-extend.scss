@@ -1,6 +1,7 @@
 @mixin titulos-style($escala){
   font-family: "fasthand",Arial, Helvetica, sans-serif;
   font-size: $escala;
+  color: #264d49;
 }
 @mixin animacion-botones($escala:1.05){
   scale:$escala;

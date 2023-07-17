@@ -3,9 +3,8 @@
   font-size: 1rem;
   padding: 0;
   margin: 0;
+  @include estilo-scrollbar;
 }
-@import "./mixin-and-extend.scss";
-@import "./variables.scss";
 //HEADER INDEX
     #index{
         display: flex;
@@ -16,13 +15,14 @@
             #encabezado{
                 display: flex;
                 align-items: center;
-                column-gap:2vh;
+                column-gap:2vw;
                 padding: .5rem;
-                background-color: rgb(75, 105, 105);
+                background-color: $color-principal;
                 transition: .5s;
                 img{
                   scale: 1;
-                  border: solid black 2px;
+                  border: solid $color-secundario3;
+                  border-radius: 100%;
                 }
                 h1{
                   @include titulos-style(4rem);
@@ -30,18 +30,7 @@
                 }
             
             #nav-principal{
-                ul{
-                    background-color: azure;
-                    display: flex;
-                    flex-wrap: nowrap;
-                    justify-content: center;
-                    column-gap: 3vw;
-                    list-style: none;
-                }
-                a{
-                    color: rgb(104, 104, 104);
-                    text-decoration: none;
-                }
+                @include nav-style;
             }
             #reproductor{
                 display: flex;
@@ -51,31 +40,37 @@
                 column-gap: .25rem;
                 scale: .7;
                 #botones{
-                    background-color: black;
-                    border: gray solid;
+                    background-color:$color-subtitulos;
+                    border: $color-secundario3 solid;
                     padding: .125rem 1rem;
                     border-radius: .5rem;
                   }
                   #reproduciendo{
-                    background-color: bisque;
-                    border: black solid;
-                    padding: .125rem;
+                    background-color: $color-secundario2;
+                    border: $color-secundario1 solid;
+                    padding: .25rem;
                   }
             }
-        }
-//MAIN INDEX
+          }
+          //MAIN INDEX
           #imagen-principal{
             position: relative;
             height: 20rem;
-            width: 45rem;
+            width: 50rem;
             margin: 0 auto;
             transition: .5s;
+            &:hover{
+              img{
+                filter: blur(2px);
+                border-radius: .5rem;
+                opacity: 80%;
+              }
+            }
             img{
-                width: 100%;
-                height: 100%;
-                &:hover{
-                    filter: blur(3px);
-                }
+              width: 100%;
+              height: 100%;
+              background-color: $color-secundario3;
+                
               }
               #titulo-principal{
                 display: flex;
@@ -84,32 +79,31 @@
                 justify-content: center;
                 width: 100%;
                 transition: .3s ;
-                @include titulos-style(2rem)
+                @include titulos-style(2.5rem)
               }
               &:hover{
                 #titulo-principal{
                     bottom:80%;
-                    font-size: 200%;
-                    color:rgb(137, 132, 132);
-                    text-shadow: 5px .5px 1px rgb(6, 6, 6);
+                    font-size: 2.5rem;
+                    text-shadow: 1px .5px 1px $color-subtitulos;
                   }
                  #descripcion-principal{
                     display: flex;
                     justify-content: center;
                     text-align: center;
-                    text-shadow: 1px 0 1px rgb(6, 6, 6);
-                    @include titulos-style(1.15rem)
-
+                    text-shadow: 2px 1px 4px black;
+                    font-weight: bold;
+                    @include titulos-style(1.7rem);
+                    color:$color-subtitulos1;
                   }
                 }
                 #descripcion-principal{
                     display: none;
                     position: absolute;
-                    bottom: 40%;
+                    bottom: 10%;
                      width: 80%;
                      margin: auto 10%;
-                     color:rgb(43, 34, 34);
-                     text-shadow: .4px .4px 15px rgb(6, 6, 6);
+                     text-shadow: 4px 4px 5px rgb(6, 6, 6);
                      transition: .60s;
                    }
               }
@@ -120,6 +114,9 @@
                 justify-content:center;
                 a{
                   text-decoration: none;
+                  img{
+                    height: 1rem;
+                  }
                   
                 }
 
