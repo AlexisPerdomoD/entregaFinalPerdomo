@@ -207,6 +207,9 @@
   }
 }
 
+#contactanos {
+  background-color: #BCAAA4;
+}
 #contactanos header nav ul {
   background-color: #D7CCC8;
   display: flex;
@@ -220,89 +223,128 @@
   text-decoration: none;
 }
 #contactanos main form {
-  width: 80vw;
-  height: 70vh;
   display: grid;
-  grid-template-columns: 25% 50% 25%;
-  grid-template-areas: "nombre mensaje imagen" "correo mensaje imagen" "ciudad motivo enviar";
-  background-color: #795548;
-  margin: 10vh auto;
-  border: solid black;
+  margin: 0 auto;
+  padding: 10px;
+  justify-content: space-around;
+  width: 78vw;
+  grid-template-columns: 25% 55% 20%;
+  grid-template-areas: "inf-contacto mensaje imagen" "inf-contacto mensaje imagen" "inf-contacto mensaje imagen" "inf-contacto mensaje enviar";
+  background-color: #4E342E;
 }
 #contactanos main form input {
-  border: solid black;
+  border: solid black 2px;
+  border-radius: 0.25rem;
   text-align: center;
   background-color: #D7CCC8;
 }
-#contactanos main form #nombre {
-  grid-area: nombre;
+#contactanos main form #informacion-contacto {
+  grid-area: inf-contacto;
+  display: flex;
+  flex-wrap: wrap;
+}
+#contactanos main form #informacion-contacto div {
+  justify-content: center;
+}
+#contactanos main form #informacion-contacto #nombre {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
-#contactanos main form #nombre input {
-  height: 1.5rem;
-  width: 95%;
+#contactanos main form #informacion-contacto #nombre input {
+  height: 85%;
+  width: 100%;
 }
-#contactanos main form #correo-electronico {
-  grid-area: correo;
+#contactanos main form #informacion-contacto #correo-electronico {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
-#contactanos main form #correo-electronico input {
-  height: 1.5rem;
-  width: 95%;
+#contactanos main form #informacion-contacto #correo-electronico input {
+  height: 85%;
+  width: 100%;
 }
-#contactanos main form #localidad {
-  grid-area: ciudad;
+#contactanos main form #informacion-contacto #motivo {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
-#contactanos main form #localidad input {
-  height: 1.5rem;
-  width: 95%;
+#contactanos main form #informacion-contacto #motivo input {
+  height: 85%;
+  width: 100%;
+}
+#contactanos main form #informacion-contacto #localidad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#contactanos main form #informacion-contacto #localidad input {
+  height: 85%;
+  width: 100%;
 }
 #contactanos main form #mensaje {
   grid-area: mensaje;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 95%;
 }
 #contactanos main form #mensaje input {
-  height: 90%;
-  width: 90%;
-}
-#contactanos main form #motivo {
-  grid-area: motivo;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#contactanos main form #motivo input {
-  height: 1.5rem;
+  height: 100%;
   width: 95%;
 }
 #contactanos main form #imagen {
   grid-area: imagen;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: auto auto;
 }
-#contactanos main form #imagen input {
-  height: 1.5rem;
-  width: 95%;
+#contactanos main form #imagen img {
+  border: solid black 2px;
+  border-radius: 50%;
 }
 #contactanos main form #enviar-formulario {
   grid-area: enviar;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 #contactanos main form #enviar-formulario input {
-  height: 2rem;
-  width: 50%;
+  height: 100%;
+  width: 100%;
+}
+#contactanos main form #enviar-formulario input {
+  background-color: #795548;
+  color: #D7CCC8;
+}
+#contactanos main form #enviar-formulario input:hover {
+  scale: 1.05;
+  opacity: 0.75;
+  background-color: #795548;
+  transition: all 0.3s;
+  background-color: #8D6E63;
+}
+#contactanos main #informacion-de-contacto-banda {
+  width: 80vw;
+  margin: 0 auto;
+}
+#contactanos main #informacion-de-contacto-banda p {
+  text-align: justify;
+  background-color: #8D6E63;
+  margin: 10px 0;
+  padding: 5px;
+  border: solid black 2px;
+  border-radius: 0;
+}
+#contactanos main #informacion-de-contacto-banda p span {
+  display: block;
+  padding: 5px;
+  background-color: #795548;
+  font-family: "fasthand";
+  font-size: 1.2rem;
 }
 #contactanos footer {
   text-align: center;

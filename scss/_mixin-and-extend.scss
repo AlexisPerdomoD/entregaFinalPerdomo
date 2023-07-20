@@ -9,8 +9,8 @@
   background-color: $color-secundario;
   transition: all .3s;
 }
-@mixin estilo-bordes($radio:0){
-  border: solid black 2px;
+@mixin estilo-bordes($radio:0,$color:black){
+  border: solid $color 2px;
   border-radius:$radio;
 }
 @mixin estilo-scrollbar{
@@ -46,10 +46,11 @@
   }
 };
 
-@mixin contactos-elem-style($height:1.5rem,$width:95%){
+@mixin contactos-elem-style($height:85%,$width:100%){
   display: flex; 
   justify-content: center;
   align-items: center;
+  width: $width;
   input{
       height: $height;
       width: $width;

@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fasthand&family=Tilt+Neon&display=swap" rel="stylesheet">
   <title>contactanos</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -50,42 +53,70 @@
   </header>
   <main>
     <form action="" method="get">
-      <div id="nombre">
+        <div id="informacion-contacto">
+          <div id="nombre">
         <input type="text" required placeholder="nombre">
-      </div>
-       <div id="correo-electronico">
-        <input type="text" required placeholder="correo electronico">
-       </div>
+          </div>
+          <div id="correo-electronico">
+            <input type="text" required placeholder="correo electronico">
+          </div>
+          <div id="localidad">
+            <input id="ciudad" type="text" required placeholder="ciudad">
+            <input type="number" required id="codigo-postal"placeholder="codigo postal">
+          </div>
+          <div id="motivo">
+            <select >
+              <option value="contrataciones privadas">
+                contrataciones privadas
+              </option>
+              <option value="deseo de partnership">
+                deseo de partnership
+              </option>
+              <option value="invitaciones">
+                invitaciones
+              </option>
+            </select>
+          </div>
+        </div>
         <div id="mensaje">
           <input type="text"  value="" placeholder="mensaje" >
-        </div>
-        <div id="motivo">
-          <select >
-            <option value="opcion1">
-              motivo1
-            </option>
-            <option value="opcion2">
-              motivo2
-            </option>
-            <option value="opcion3">
-              motivo3
-            </option>
-          </select>
-        </div>
-       
-        <div id="imagen">
-          <img  src="" alt="culo">
-        </div>
-        
-        <div id="localidad">
-          <input id="ciudad" type="text" required placeholder="ciudad">
-          <input type="number" required id="codigo-postal"placeholder="codigo postal">
         </div>
         <div id="enviar-formulario">
           <input type="submit" value="enviar">
         </div>
-          
+        <div id="imagen">
+          <img  src="../images/logo1.png" alt="logo">
+        </div>
     </form>
+        <div id="informacion-de-contacto-banda">
+          <p id="intro-contactos">
+            nos alegra mucho saber que estás interesado en conectarte directamente con los integrantes de la banda. Valoramos cada comentario y apreciamos el tiempo que inviertes en ayudarnos a crecer y evolucionar en nuestro proyecto musical. <br> Si deseas compartir comentarios más íntimos a los integrantes GO:
+          </p>
+          <p>
+            Max, el vocalista carismático y apasionado, siempre está en busca de nuevas formas de expresión artística. Su voz potente y emotiva hace eco en los corazones de nuestros seguidores: <br><br>
+            <span>
+              MaxEcho@rockvibes.com
+            </span>
+          </p>
+          <p>
+            Luna, la guitarrista creativa y soñadora, es la responsable de los riffs y melodías que dan vida a nuestras canciones. Si tienes ideas para fusionar estilos musicales o simplemente quieres hablar sobre cómo la música nos conecta a todos, no dudes en escribir a LunaRiff: <br><br>
+            <span>
+              LunaRiff@rockvibes.com
+            </span>
+          </p>
+          <p>
+            Felix es nuestro baterista y cerebro rítmico detrás de los poderosos ritmos que mueven a las masas, llegate: <br><br>
+            <span>
+              BeatsByFelix@rockvibes.com
+            </span>
+          </p>
+          <p>
+            El bajista Vinyl es un espíritu libre y amante de lo vintage. Su bajo proporciona esos sonidos profundos y envolventes que caracterizan nuestra música. Si quieres hablar sobre la esencia del rock clásico con un toque moderno, escríbele a VinylGroove: <br><br>
+            <span>
+              VinylGroove@rockvibes.com
+            </span>
+          </p>
+        </div>
    </main>
    <footer>
     <p>
