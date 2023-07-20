@@ -451,8 +451,9 @@
 }
 #galeria main {
   display: grid;
+  margin-top: 5vh;
   grid-template-columns: 90vw;
-  grid-template-rows: 50vh 10vh 40vh;
+  grid-template-rows: auto auto auto;
   grid-template-areas: "imagen-actual" "imagen-actual-nav" "container-galeria";
   row-gap: 2vh;
   justify-content: center;
@@ -460,19 +461,20 @@
 #galeria main #imagen-actual {
   grid-area: imagen-actual;
   display: flex;
-  position: relative;
   justify-content: center;
+  position: relative;
+  margin: 0 25%;
 }
 #galeria main #imagen-actual img {
-  border: solid black 2px;
+  border: solid #3E2723 2px;
   border-radius: 0.25rem;
   width: 50vw;
   height: 50vh;
 }
 #galeria main #imagen-actual #ampliar-boton {
   position: absolute;
-  bottom: 1vh;
-  left: 63vw;
+  bottom: 1%;
+  right: 0;
 }
 #galeria main #imagen-actual #ampliar-boton:hover input {
   scale: 0.85;
@@ -481,11 +483,11 @@
   transition: all 0.3s;
   border: solid black 2px;
   border-radius: 100%;
-  height: 5vw;
+  height: 60px;
   transition: 1s;
 }
 #galeria main #imagen-actual #ampliar-boton input {
-  width: 7vw;
+  width: 80px;
   scale: 0.75;
   opacity: 0.5;
   color: #BCAAA4;
@@ -496,31 +498,24 @@
 }
 #galeria main #galeria-subcarpetas {
   grid-area: imagen-actual-nav;
-  width: 60%;
   margin: 0 auto;
 }
 #galeria main #galeria-subcarpetas ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  gap: 2vw;
+  column-gap: 0;
   background-color: #D7CCC8;
-  padding: 0 1vw;
-  border: solid black 2px;
-  border-radius: 3rem;
+  border: solid #3E2723 2px;
+  border-radius: 0.25rem;
 }
 #galeria main #galeria-subcarpetas ul li {
   list-style: none;
-  padding: 1vh 0;
+  padding: 1vh 1vw;
 }
-#galeria main #galeria-subcarpetas ul li img {
-  border: solid black 2px;
-  border-radius: 100%;
-  height: 2.5rem;
-  vertical-align: middle;
-}
-#galeria main #galeria-subcarpetas ul li img:hover {
-  scale: 1.1;
+#galeria main #galeria-subcarpetas ul li:hover {
+  scale: 1.05;
   opacity: 0.75;
   background-color: #795548;
   transition: all 0.3s;
@@ -535,13 +530,75 @@
   width: 100%;
 }
 #galeria main #galeria-container img {
-  border: solid black 2px;
-  border-radius: 0.5rem;
-  width: 7vw;
-  height: 7vw;
+  border: solid #3E2723 2px;
+  border-radius: 0.25rem;
+  width: 100px;
+  height: 100px;
+}
+#galeria main #mostrar-mas-boton {
+  background-color: #8D6E63;
+  width: 30vw;
+  border: solid #3E2723 2px;
+  border-radius: 0.25rem;
+  margin: 0 auto;
 }
 #galeria footer {
   text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  #galeria {
+    margin: 0;
+    padding: 0;
+  }
+  #galeria main {
+    margin: 0;
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 0;
+  }
+  #galeria main #imagen-actual {
+    margin: 0;
+    width: 100%;
+  }
+  #galeria main #imagen-actual img {
+    width: 100%;
+    border-radius: 0;
+    border: none;
+  }
+  #galeria main #imagen-actual #ampliar-boton {
+    bottom: 1%;
+    scale: 1.125;
+    right: 2vw;
+  }
+  #galeria main #galeria-subcarpetas {
+    margin: 0;
+  }
+  #galeria main #galeria-subcarpetas ul {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  #galeria main #galeria-subcarpetas ul li {
+    color: #3E2723;
+  }
+  #galeria main #galeria-container {
+    grid-template-columns: repeat(4, 25vw);
+    column-gap: 0;
+    row-gap: 0;
+    margin: 0;
+    padding: 0;
+  }
+  #galeria main #galeria-container img {
+    width: 24.2vw;
+    border-radius: 0;
+    border: solid 1px #3E2723;
+  }
+  #galeria main #mostrar-mas-boton {
+    scale: 1.25;
+    margin: 10px auto;
+    width: 70vw;
+  }
 }
 
 #experiencias-de-fans {
