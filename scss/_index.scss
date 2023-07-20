@@ -14,13 +14,15 @@
             flex-flow: column wrap;
             #encabezado{
                 display: flex;
+                flex-wrap: nowrap;
                 align-items: center;
+                justify-content: center;
                 column-gap:2vw;
-                padding: .5rem;
+                padding: 10px;
                 background-color: $color-principal;
                 transition: .5s;
                 img{
-                  scale: 1;
+                  width: 100px;
                   border: solid $color-secundario3;
                   border-radius: 100%;
                 }
@@ -44,6 +46,13 @@
                     border: $color-secundario3 solid;
                     padding: .125rem 1rem;
                     border-radius: .5rem;
+                    input{
+                      color:$color-subtitulos1;
+                      background-color:$color-secundario3;
+                      padding: 2px;
+                      border-radius: .5rem;
+
+                    }
                   }
                   #reproduciendo{
                     background-color: $color-secundario2;
@@ -55,8 +64,8 @@
           //MAIN INDEX
           #imagen-principal{
             position: relative;
-            height: 20rem;
-            width: 50rem;
+            height: 320px;
+            width: 800px;
             margin: 0 auto;
             transition: .5s;
             &:hover{
@@ -122,19 +131,65 @@
 
               }
             }
-
-    @media screen and (max-width: $breakpoint){
-      #encabezado{
-        justify-content: center;
-        transition: 1.5s;
+#index{
+  margin: 0;
+    @media screen and (max-width: $breakpoint){  
+      #header-index{
+        transition: .5s;
+        #encabezado{
+          padding: 10px 10vw;
+          h1{
+            font-size: 2rem;
+            transition: .5s;
+          }
+          img{
+            width: 70px;
+          }
+        }
+        #reproductor{ 
+          scale: 1  ;
+          display: block;
+          margin: 0;
+          padding: 0;
+          #botones{
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            border:none;
+            border-radius: 0;
+            width: 100%;
+            input{
+              width: 20%;
+              background-color: $color-secundario1;
+              @include estilo-bordes(1rem);
+              padding: 5px 0;
+              margin: 1px 0;
+              color: $color-subtitulos;
+            }
+          }
+          #reproduciendo{
+            text-align: center;
+          }
+        }
       }
       #imagen-principal{
-        height: 10rem;
-        width: 25rem;
+        margin: 0;
+        height: 340px;
+        width: 100%;
+        max-width: 600px;
         transition: .5s;
+        #titulo-principal{
+          font-size: 2rem;
+        }
+        &:hover{
+          #descripcion-principal{
+            font-size: 1.3rem;
+          }
+        }
       }
     #footer-principal{
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
     }
   }
+}

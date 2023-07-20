@@ -25,14 +25,16 @@
 }
 #index #header-index #encabezado {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
+  justify-content: center;
   column-gap: 2vw;
-  padding: 0.5rem;
+  padding: 10px;
   background-color: #4E342E;
   transition: 0.5s;
 }
 #index #header-index #encabezado img {
-  scale: 1;
+  width: 100px;
   border: solid #BCAAA4;
   border-radius: 100%;
 }
@@ -67,6 +69,12 @@
   padding: 0.125rem 1rem;
   border-radius: 0.5rem;
 }
+#index #header-index #reproductor #botones input {
+  color: #1f1412;
+  background-color: #BCAAA4;
+  padding: 2px;
+  border-radius: 0.5rem;
+}
 #index #header-index #reproductor #reproduciendo {
   background-color: #D7CCC8;
   border: #8D6E63 solid;
@@ -74,8 +82,8 @@
 }
 #index #imagen-principal {
   position: relative;
-  height: 20rem;
-  width: 50rem;
+  height: 320px;
+  width: 800px;
   margin: 0 auto;
   transition: 0.5s;
 }
@@ -137,21 +145,68 @@
   height: 1rem;
 }
 
+#index {
+  margin: 0;
+}
 @media screen and (max-width: 600px) {
-  #encabezado {
-    justify-content: center;
-    transition: 1.5s;
-  }
-  #imagen-principal {
-    height: 10rem;
-    width: 25rem;
+  #index #header-index {
     transition: 0.5s;
   }
-  #footer-principal {
+  #index #header-index #encabezado {
+    padding: 10px 10vw;
+  }
+  #index #header-index #encabezado h1 {
+    font-size: 2rem;
+    transition: 0.5s;
+  }
+  #index #header-index #encabezado img {
+    width: 70px;
+  }
+  #index #header-index #reproductor {
+    scale: 1;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  #index #header-index #reproductor #botones {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+  }
+  #index #header-index #reproductor #botones input {
+    width: 20%;
+    background-color: #8D6E63;
+    border: solid black 2px;
+    border-radius: 1rem;
+    padding: 5px 0;
+    margin: 1px 0;
+    color: #3E2723;
+  }
+  #index #header-index #reproductor #reproduciendo {
+    text-align: center;
+  }
+  #index #imagen-principal {
+    margin: 0;
+    height: 340px;
+    width: 100%;
+    max-width: 600px;
+    transition: 0.5s;
+  }
+  #index #imagen-principal #titulo-principal {
+    font-size: 2rem;
+  }
+  #index #imagen-principal:hover #descripcion-principal {
+    font-size: 1.3rem;
+  }
+  #index #footer-principal {
+    display: flex;
+    justify-content: center;
   }
 }
+
 #contactanos header nav ul {
   background-color: #D7CCC8;
   display: flex;
