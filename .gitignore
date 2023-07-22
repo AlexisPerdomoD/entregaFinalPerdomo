@@ -1,4 +1,5 @@
 *.map
+*.txt
 stylesheet.css
 contactos.css
 variables.css
