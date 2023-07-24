@@ -1,19 +1,19 @@
-@import "./variables.scss";
-@import './mixin-and-extend.scss';
+
 #contactanos{
     background-color: $color-secundario3;
     header{
         nav{
-          @include nav-style
+          @include nav-style;
         }
       }
     main{ 
+        width: 80vw;
+        margin: 0 auto;
         form{
             display: grid;
             margin: 0 auto;
             padding: 10px;
             justify-content: space-around;
-            width: 78vw;
             grid-template-columns: 25% 55% 20%;
             grid-template-areas: 
             "inf-contacto mensaje imagen"
@@ -22,9 +22,9 @@
             "inf-contacto mensaje enviar";
             background-color:$color-principal;
             input{
-            @include estilo-bordes(.25rem);
-            text-align: center;
-            background-color: $color-secundario2;
+                @include estilo-bordes(.25rem);
+                text-align: center;
+                background-color: $color-secundario2;
             }
             #informacion-contacto{
                 grid-area:inf-contacto;
@@ -41,6 +41,12 @@
                 }
                 #motivo{
                     @include contactos-elem-style;
+                    select{
+                        width: 100%;
+                        option{
+                            text-align: center;
+                        }
+                    }
                 }
                 #localidad{
                     @include contactos-elem-style;
@@ -51,10 +57,14 @@
                 @include contactos-elem-style(100%,95%);
             }
             #imagen{
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 grid-area:imagen;
-                margin: auto auto;
+                padding: 1vh 0;
                 img{
                     @include estilo-bordes(50%);
+                    width: 100%;
                 }
             }
             #enviar-formulario{
@@ -68,11 +78,10 @@
 
                     }
                 }
-            }   
-        }
+            }
+        }   
         #informacion-de-contacto-banda{
-            width: 80vw;
-            margin: 0 auto;
+            width: 100%;
             p{
                 text-align: justify;
                 background-color: $color-secundario1;
@@ -80,18 +89,83 @@
                 padding: 5px;
                 @include estilo-bordes;
                 span{
-                    display: block;
-                    padding: 5px;
+                    padding: 5px 0;
                     background-color: $color-secundario;
-                    font-family: "fasthand";
-                    font-size: 1.2rem;
+                    font-family:"fasthand";
+                    font-size: 1.2rem; 
                 }
-
             }
         }
     }
     footer{
         text-align: center;
+    }
+}
+#contactanos{
+    @media  screen and (max-width:$breakpoint) {
+        main{
+            width:100%;
+            transition: all .3s;
+            form{
+                padding: 0;
+                height: 400px;
+                grid-template-areas: 
+                "inf-contacto"
+                "mensaje"
+                "enviar";
+                grid-template-columns:  100%;
+                grid-template-rows: 55% 35% 10% ;
+                #informacion-contacto{
+                    padding:2vh 0 0 0; 
+                    width:100% ;
+                    #nombre,#correo-electronico,#localidad,#motivo{
+                        input{
+                            @include estilo-bordes(0,$color-subtitulos1);
+                        }
+                    }
+                    #motivo{
+                        margin: 0 auto;
+                        width: 50%;
+                    }
+                }
+                #mensaje{
+                    margin: 0;
+                    width: 100%;
+                    padding-bottom:  2vh;
+                    input{
+                        @include estilo-bordes(0,$color-subtitulos1);
+                        width: 100%;
+                    }
+                }
+                #imagen{
+                    display: none;
+                }
+                #enviar-formulario{
+                    width:80%;
+                    margin: 0 auto 2vh;
+                }
+            }
+            #informacion-de-contacto-banda{
+                width: 100%;
+                #intro-contactos{
+                    margin: 0;
+                    background-color: $color-secundario;
+                    @include estilo-bordes(0,$color-subtitulos1);
+                }
+                p{
+                    &:not(#intro-contactos){
+                        border: none;
+                        margin: 0;
+                        span{
+                            display: block;
+                            padding: 5px;
+                            border-radius: .25rem;
+                        }
+                    }
+                }
+            }
+        }
+        
     }
 }
 

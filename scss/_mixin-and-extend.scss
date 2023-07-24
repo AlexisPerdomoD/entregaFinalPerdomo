@@ -3,11 +3,17 @@
   font-size: $escala;
   color: #264d49;
 }
-@mixin animacion-botones($escala:1.05){
+@mixin animacion-botones($escala:1.05,$b:s){
   scale:$escala;
   opacity: .75;
-  background-color: $color-secundario;
-  transition: all .3s;
+  @if($b==s){
+    background-color: $color-secundario;
+  }
+  @else{
+    background-color: $b;
+  }
+  
+  transition: all .25s;
 }
 @mixin estilo-bordes($radio:0,$color:black){
   border: solid $color 2px;
@@ -37,8 +43,15 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    column-gap: 3vw;
+    column-gap: 2vw;
     list-style: none;
+  }
+  li{
+    &:hover{
+      @include animacion-botones(1.1,none);
+      opacity: 1;
+
+    }
   }
   a{
     color:$color-secundario;

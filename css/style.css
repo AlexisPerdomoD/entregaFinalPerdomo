@@ -48,8 +48,15 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  column-gap: 3vw;
+  column-gap: 2vw;
   list-style: none;
+}
+#index #header-index #nav-principal li:hover {
+  scale: 1.1;
+  opacity: 0.75;
+  background-color: none;
+  transition: all 0.25s;
+  opacity: 1;
 }
 #index #header-index #nav-principal a {
   color: #795548;
@@ -215,19 +222,29 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  column-gap: 3vw;
+  column-gap: 2vw;
   list-style: none;
+}
+#contactanos header nav li:hover {
+  scale: 1.1;
+  opacity: 0.75;
+  background-color: none;
+  transition: all 0.25s;
+  opacity: 1;
 }
 #contactanos header nav a {
   color: #795548;
   text-decoration: none;
+}
+#contactanos main {
+  width: 80vw;
+  margin: 0 auto;
 }
 #contactanos main form {
   display: grid;
   margin: 0 auto;
   padding: 10px;
   justify-content: space-around;
-  width: 78vw;
   grid-template-columns: 25% 55% 20%;
   grid-template-areas: "inf-contacto mensaje imagen" "inf-contacto mensaje imagen" "inf-contacto mensaje imagen" "inf-contacto mensaje enviar";
   background-color: #4E342E;
@@ -276,6 +293,12 @@
   height: 85%;
   width: 100%;
 }
+#contactanos main form #informacion-contacto #motivo select {
+  width: 100%;
+}
+#contactanos main form #informacion-contacto #motivo select option {
+  text-align: center;
+}
 #contactanos main form #informacion-contacto #localidad {
   display: flex;
   justify-content: center;
@@ -298,12 +321,16 @@
   width: 95%;
 }
 #contactanos main form #imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   grid-area: imagen;
-  margin: auto auto;
+  padding: 1vh 0;
 }
 #contactanos main form #imagen img {
   border: solid black 2px;
   border-radius: 50%;
+  width: 100%;
 }
 #contactanos main form #enviar-formulario {
   grid-area: enviar;
@@ -324,12 +351,11 @@
   scale: 1.05;
   opacity: 0.75;
   background-color: #795548;
-  transition: all 0.3s;
+  transition: all 0.25s;
   background-color: #8D6E63;
 }
 #contactanos main #informacion-de-contacto-banda {
-  width: 80vw;
-  margin: 0 auto;
+  width: 100%;
 }
 #contactanos main #informacion-de-contacto-banda p {
   text-align: justify;
@@ -340,14 +366,74 @@
   border-radius: 0;
 }
 #contactanos main #informacion-de-contacto-banda p span {
-  display: block;
-  padding: 5px;
+  padding: 5px 0;
   background-color: #795548;
   font-family: "fasthand";
   font-size: 1.2rem;
 }
 #contactanos footer {
   text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  #contactanos main {
+    width: 100%;
+    transition: all 0.3s;
+  }
+  #contactanos main form {
+    padding: 0;
+    height: 400px;
+    grid-template-areas: "inf-contacto" "mensaje" "enviar";
+    grid-template-columns: 100%;
+    grid-template-rows: 55% 35% 10%;
+  }
+  #contactanos main form #informacion-contacto {
+    padding: 2vh 0 0 0;
+    width: 100%;
+  }
+  #contactanos main form #informacion-contacto #nombre input, #contactanos main form #informacion-contacto #correo-electronico input, #contactanos main form #informacion-contacto #localidad input, #contactanos main form #informacion-contacto #motivo input {
+    border: solid #1f1412 2px;
+    border-radius: 0;
+  }
+  #contactanos main form #informacion-contacto #motivo {
+    margin: 0 auto;
+    width: 50%;
+  }
+  #contactanos main form #mensaje {
+    margin: 0;
+    width: 100%;
+    padding-bottom: 2vh;
+  }
+  #contactanos main form #mensaje input {
+    border: solid #1f1412 2px;
+    border-radius: 0;
+    width: 100%;
+  }
+  #contactanos main form #imagen {
+    display: none;
+  }
+  #contactanos main form #enviar-formulario {
+    width: 80%;
+    margin: 0 auto 2vh;
+  }
+  #contactanos main #informacion-de-contacto-banda {
+    width: 100%;
+  }
+  #contactanos main #informacion-de-contacto-banda #intro-contactos {
+    margin: 0;
+    background-color: #795548;
+    border: solid #1f1412 2px;
+    border-radius: 0;
+  }
+  #contactanos main #informacion-de-contacto-banda p:not(#intro-contactos) {
+    border: none;
+    margin: 0;
+  }
+  #contactanos main #informacion-de-contacto-banda p:not(#intro-contactos) span {
+    display: block;
+    padding: 5px;
+    border-radius: 0.25rem;
+  }
 }
 
 #tour-mundial header h1 {
@@ -362,8 +448,15 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  column-gap: 3vw;
+  column-gap: 2vw;
   list-style: none;
+}
+#tour-mundial header nav li:hover {
+  scale: 1.1;
+  opacity: 0.75;
+  background-color: none;
+  transition: all 0.25s;
+  opacity: 1;
 }
 #tour-mundial header nav a {
   color: #795548;
@@ -442,8 +535,15 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  column-gap: 3vw;
+  column-gap: 2vw;
   list-style: none;
+}
+#galeria header nav li:hover {
+  scale: 1.1;
+  opacity: 0.75;
+  background-color: none;
+  transition: all 0.25s;
+  opacity: 1;
 }
 #galeria header nav a {
   color: #795548;
@@ -480,7 +580,7 @@
   scale: 0.85;
   opacity: 0.75;
   background-color: #795548;
-  transition: all 0.3s;
+  transition: all 0.25s;
   border: solid black 2px;
   border-radius: 100%;
   height: 60px;
@@ -518,7 +618,7 @@
   scale: 1.05;
   opacity: 0.75;
   background-color: #795548;
-  transition: all 0.3s;
+  transition: all 0.25s;
 }
 #galeria main #galeria-container {
   grid-area: container-galeria;
@@ -616,8 +716,15 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  column-gap: 3vw;
+  column-gap: 2vw;
   list-style: none;
+}
+#experiencias-de-fans header nav li:hover {
+  scale: 1.1;
+  opacity: 0.75;
+  background-color: none;
+  transition: all 0.25s;
+  opacity: 1;
 }
 #experiencias-de-fans header nav a {
   color: #795548;
