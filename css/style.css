@@ -5,14 +5,11 @@
   margin: 0;
 }
 *::-webkit-scrollbar {
-  width: 0.5rem;
-}
-*::-webkit-scrollbar-track {
-  background-color: #795548;
+  width: 0.5vw;
 }
 *::-webkit-scrollbar-thumb {
-  background-color: #3E2723;
-  border-radius: 1rem;
+  background-color: rgba(121, 85, 72, 0.5);
+  border-radius: 2rem;
 }
 
 #index {
@@ -741,14 +738,11 @@
   padding: 0 1vw;
 }
 #experiencias-de-fans main #main-experiencia-de-fans::-webkit-scrollbar {
-  width: 0.5rem;
-}
-#experiencias-de-fans main #main-experiencia-de-fans::-webkit-scrollbar-track {
-  background-color: #795548;
+  width: 0.5vw;
 }
 #experiencias-de-fans main #main-experiencia-de-fans::-webkit-scrollbar-thumb {
-  background-color: #3E2723;
-  border-radius: 1rem;
+  background-color: rgba(121, 85, 72, 0.5);
+  border-radius: 2rem;
 }
 #experiencias-de-fans main #main-experiencia-de-fans .comentario-experiencia {
   border: solid black 2px;
