@@ -35,6 +35,7 @@
 
 // bloques 
 @mixin nav-style{
+  
   ul{
     background-color:$color-secundario2;
     display: flex;
@@ -42,17 +43,30 @@
     justify-content: center;
     column-gap: 2vw;
     list-style: none;
-  }
-  li{
-    &:hover{
-      @include animacion-botones(1.1,none);
-      opacity: 1;
-
+    overflow: hidden;
+    li{
+      &:hover{
+        @include animacion-botones(1.1,none);
+        opacity: 1;
+      }
+      a{
+        color:$color-secundario;
+        text-decoration: none;
+      }
     }
   }
-  a{
-    color:$color-secundario;
-    text-decoration: none;
+  @media screen and (max-width:$breakpoint){
+    ul{
+      justify-content: space-around;
+      column-gap: 0;
+      li{
+        width: 33%;
+        text-align: center;
+        &:hover{
+          background-color: rgba($color:$color-secundario, $alpha: .5);
+        }
+      }
+    }
   }
 };
 

@@ -103,7 +103,7 @@
         flex-flow:row wrap;
         li{
           height: auto;
-          width: 49.2%;
+          width: 100%;
           @include estilo-bordes(0,$color-subtitulos);
         }
       }

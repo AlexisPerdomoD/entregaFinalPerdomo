@@ -43,21 +43,35 @@
 #index #header-index #nav-principal ul {
   background-color: #D7CCC8;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   column-gap: 2vw;
   list-style: none;
+  overflow: hidden;
 }
-#index #header-index #nav-principal li:hover {
+#index #header-index #nav-principal ul li:hover {
   scale: 1.1;
   opacity: 0.75;
   background-color: none;
   transition: all 0.25s;
   opacity: 1;
 }
-#index #header-index #nav-principal a {
+#index #header-index #nav-principal ul li a {
   color: #795548;
   text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  #index #header-index #nav-principal ul {
+    justify-content: space-around;
+    column-gap: 0;
+  }
+  #index #header-index #nav-principal ul li {
+    width: 33%;
+    text-align: center;
+  }
+  #index #header-index #nav-principal ul li:hover {
+    background-color: rgba(121, 85, 72, 0.5);
+  }
 }
 #index #header-index #reproductor {
   display: flex;
@@ -196,14 +210,14 @@
     margin: 0;
     height: 340px;
     width: 100%;
-    max-width: 600px;
     transition: 0.5s;
   }
   #index #imagen-principal #titulo-principal {
     font-size: 2rem;
   }
   #index #imagen-principal:hover #descripcion-principal {
-    font-size: 1.3rem;
+    font-size: 1rem;
+    font-family: "tilt neon";
   }
   #index #footer-principal {
     display: flex;
@@ -217,21 +231,35 @@
 #contactanos header nav ul {
   background-color: #D7CCC8;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   column-gap: 2vw;
   list-style: none;
+  overflow: hidden;
 }
-#contactanos header nav li:hover {
+#contactanos header nav ul li:hover {
   scale: 1.1;
   opacity: 0.75;
   background-color: none;
   transition: all 0.25s;
   opacity: 1;
 }
-#contactanos header nav a {
+#contactanos header nav ul li a {
   color: #795548;
   text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  #contactanos header nav ul {
+    justify-content: space-around;
+    column-gap: 0;
+  }
+  #contactanos header nav ul li {
+    width: 33%;
+    text-align: center;
+  }
+  #contactanos header nav ul li:hover {
+    background-color: rgba(121, 85, 72, 0.5);
+  }
 }
 #contactanos main {
   width: 80vw;
@@ -451,21 +479,35 @@
 #tour-mundial header nav ul {
   background-color: #D7CCC8;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   column-gap: 2vw;
   list-style: none;
+  overflow: hidden;
 }
-#tour-mundial header nav li:hover {
+#tour-mundial header nav ul li:hover {
   scale: 1.1;
   opacity: 0.75;
   background-color: none;
   transition: all 0.25s;
   opacity: 1;
 }
-#tour-mundial header nav a {
+#tour-mundial header nav ul li a {
   color: #795548;
   text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  #tour-mundial header nav ul {
+    justify-content: space-around;
+    column-gap: 0;
+  }
+  #tour-mundial header nav ul li {
+    width: 33%;
+    text-align: center;
+  }
+  #tour-mundial header nav ul li:hover {
+    background-color: rgba(121, 85, 72, 0.5);
+  }
 }
 #tour-mundial main {
   margin: 1vh 1vw;
@@ -557,7 +599,7 @@
   }
   #tour-mundial main #lista-de-fechas li {
     height: auto;
-    width: 49.2%;
+    width: 100%;
     border: solid #3E2723 2px;
     border-radius: 0;
   }
@@ -569,21 +611,35 @@
 #galeria header nav ul {
   background-color: #D7CCC8;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   column-gap: 2vw;
   list-style: none;
+  overflow: hidden;
 }
-#galeria header nav li:hover {
+#galeria header nav ul li:hover {
   scale: 1.1;
   opacity: 0.75;
   background-color: none;
   transition: all 0.25s;
   opacity: 1;
 }
-#galeria header nav a {
+#galeria header nav ul li a {
   color: #795548;
   text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  #galeria header nav ul {
+    justify-content: space-around;
+    column-gap: 0;
+  }
+  #galeria header nav ul li {
+    width: 33%;
+    text-align: center;
+  }
+  #galeria header nav ul li:hover {
+    background-color: rgba(121, 85, 72, 0.5);
+  }
 }
 #galeria main {
   display: grid;
@@ -750,21 +806,35 @@
 #experiencias-de-fans header nav ul {
   background-color: #D7CCC8;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   column-gap: 2vw;
   list-style: none;
+  overflow: hidden;
 }
-#experiencias-de-fans header nav li:hover {
+#experiencias-de-fans header nav ul li:hover {
   scale: 1.1;
   opacity: 0.75;
   background-color: none;
   transition: all 0.25s;
   opacity: 1;
 }
-#experiencias-de-fans header nav a {
+#experiencias-de-fans header nav ul li a {
   color: #795548;
   text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  #experiencias-de-fans header nav ul {
+    justify-content: space-around;
+    column-gap: 0;
+  }
+  #experiencias-de-fans header nav ul li {
+    width: 33%;
+    text-align: center;
+  }
+  #experiencias-de-fans header nav ul li:hover {
+    background-color: rgba(121, 85, 72, 0.5);
+  }
 }
 #experiencias-de-fans main #main-experiencia-de-fans {
   display: flex;
