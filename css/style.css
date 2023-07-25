@@ -363,7 +363,8 @@
   border-radius: 0;
 }
 #contactanos main #informacion-de-contacto-banda p span {
-  padding: 5px 0;
+  display: block;
+  padding: 5px;
   background-color: #795548;
   font-family: "fasthand";
   font-size: 1.2rem;
@@ -433,12 +434,19 @@
   }
 }
 
+#tour-mundial {
+  height: 100vh;
+  background-color: #BCAAA4;
+}
+#tour-mundial header {
+  background-color: #4E342E;
+}
 #tour-mundial header h1 {
   font-family: "fasthand", Arial, Helvetica, sans-serif;
   font-size: 3rem;
   color: #264d49;
   text-align: center;
-  background-color: #4E342E;
+  width: 100%;
 }
 #tour-mundial header nav ul {
   background-color: #D7CCC8;
@@ -460,68 +468,99 @@
   text-decoration: none;
 }
 #tour-mundial main {
+  margin: 1vh 1vw;
+  height: 80vh;
   display: grid;
-  justify-content: center;
-  grid-template-columns: 18vw 76vw;
-  grid-template-rows: 28vh repeat(5, 9vh);
-  grid-template-areas: "side principal" "tokio principal" "korea principal" "francia principal" "alemania principal" "venezuela principal";
-  row-gap: 0.5vh;
-  column-gap: 2vw;
+  grid-template-columns: 25vw 72vw;
+  grid-template-rows: 30% 67%;
+  row-gap: 1%;
+  column-gap: 1vh;
+  grid-template-areas: "aside principal" "lista principal";
 }
-#tour-mundial main .informacion-secundaria {
-  grid-area: side;
-  display: none;
-  background-color: #D7CCC8;
-  text-align: center;
-  border: solid black;
-}
-#tour-mundial main .tour-default {
-  display: inline-block;
+#tour-mundial main #informacion-complementaria {
+  grid-area: aside;
   background-color: #795548;
-  text-align: center;
-  border: solid black;
+  border: solid #3E2723 2px;
+  border-radius: 0.25rem;
 }
-#tour-mundial main span {
+#tour-mundial main #informacion-complementaria p {
+  padding: 2%;
+  text-justify: inter-word;
+}
+#tour-mundial main #lista-de-fechas {
+  grid-area: lista;
+  list-style: none;
   display: flex;
-  background-color: #795548;
-  border: solid black;
+  flex-direction: column;
+  height: 100%;
+}
+#tour-mundial main #lista-de-fechas li {
+  height: 20%;
+  background-color: #8D6E63;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: center;
+  font-weight: bolder;
+  color: #1f1412;
+  border: solid #3E2723 2px;
+  border-radius: 0.25rem;
 }
-#tour-mundial main .tokio {
-  grid-area: tokio;
+#tour-mundial main #lista-de-fechas li:hover {
+  background-color: #BCAAA4;
 }
-#tour-mundial main #e-lista-korea {
-  grid-area: korea;
-}
-#tour-mundial main #e-lista-korea:hover {
-  scale: 1.01;
-  transition: 0.1s;
-}
-#tour-mundial main #e-lista-korea:hover {
-  display: flex;
-}
-#tour-mundial main #e-lista-francia {
-  grid-area: francia;
-}
-#tour-mundial main #e-lista-alemania {
-  grid-area: alemania;
-}
-#tour-mundial main #e-lista-venezuela {
-  grid-area: venezuela;
-}
-#tour-mundial main .informacion-tour {
+#tour-mundial main #informacion-principal {
   grid-area: principal;
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #1f1412;
+  background-color: #D7CCC8;
+  border: solid #3E2723 2px;
+  border-radius: 0.25rem;
 }
-#tour-mundial main .tour-default {
-  display: inline-block;
-  background-color: #795548;
+#tour-mundial main #informacion-principal p {
+  padding: 2%;
   text-align: center;
-  border: solid black;
+  font-family: "fasthand", Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  color: #264d49;
+}
+#tour-mundial main #informacion-principal img {
+  border: solid #BCAAA4 2px;
+  border-radius: 100%;
+  width: 18vw;
+  border: solid 1vw #BCAAA4;
 }
 #tour-mundial footer {
   text-align: center;
+}
+
+#tour-mundial {
+  height: auto;
+}
+@media screen and (max-width: 600px) {
+  #tour-mundial header h1 {
+    font-size: 1.5rem;
+  }
+  #tour-mundial main {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "principal" "aside" "lista";
+    row-gap: 0;
+  }
+  #tour-mundial main #lista-de-fechas {
+    flex-flow: row wrap;
+  }
+  #tour-mundial main #lista-de-fechas li {
+    height: auto;
+    width: 49.2%;
+    border: solid #3E2723 2px;
+    border-radius: 0;
+  }
 }
 
 #galeria {

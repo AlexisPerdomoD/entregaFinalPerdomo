@@ -89,7 +89,8 @@
                 padding: 5px;
                 @include estilo-bordes;
                 span{
-                    padding: 5px 0;
+                    display: block;
+                    padding: 5px;
                     background-color: $color-secundario;
                     font-family:"fasthand";
                     font-size: 1.2rem; 

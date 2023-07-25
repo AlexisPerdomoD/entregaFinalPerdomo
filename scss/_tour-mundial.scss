@@ -1,85 +1,112 @@
 #tour-mundial{
+  height: 100vh;
+  background-color: $color-secundario3;
   header{
+    background-color: $color-principal;
     h1{
       @include titulos-style(3rem);
       text-align: center;
-      background-color: $color-principal;
+      width: 100%;
     }
     nav{
       @include nav-style;
     }
   }
   main{
+    margin: 1vh 1vw;
+    height: 80vh;
     display: grid;
-    justify-content: center;
-    grid-template-columns: 18vw 76vw;
-    grid-template-rows: 28vh repeat(5 , 9vh);
-    grid-template-areas: 
-    "side principal"
-    "tokio principal"
-    "korea principal"
-    "francia principal"
-    "alemania principal"
-    "venezuela principal"
-    ;
-    row-gap: .5vh;
-    column-gap: 2vw;
-    .informacion-secundaria{
-      grid-area: side;
-      display:none;
-      background-color: $color-secundario2;
-      text-align: center;
-      border: solid black;
-    }
-    .tour-default{
-      display: inline-block;
+    grid-template-columns: 25vw 72vw;
+    grid-template-rows: 30% 67%;
+    row-gap: 1%;
+    column-gap: 1vh;
+    grid-template-areas:
+    "aside principal"
+    "lista principal";
+    #informacion-complementaria{
+      grid-area: aside;
       background-color: $color-secundario;
-      text-align: center;
-      border: solid black;
+      @include estilo-bordes(.25rem,$color-subtitulos);
+      p{
+        padding: 2%;
+        text-justify:inter-word;
+      }
     }
-    span{
+    #lista-de-fechas{
+      grid-area: lista;
+      list-style: none;
       display: flex;
-      background-color: $color-secundario;
-      border: solid black;
-      align-items: center;
-      justify-content: center;
-    }
-    .tokio{
-        grid-area:tokio;
+      flex-direction: column;
+      height: 100%;
+      li{
+        height: 20%;
+        background-color: $color-secundario1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder;
+        color: $color-subtitulos1;
+        @include estilo-bordes(.25rem,$color-subtitulos);
+        &:hover{
+          background-color: $color-secundario3;
+        }
+        
         
       }
-      #e-lista-korea{
-        grid-area: korea;
-        &:hover{
-          scale: 1.01;
-          transition: .1s;
-          &{
-          display: flex;
-          }
-        }
-      }
-      #e-lista-francia{
-        grid-area: francia;
-      }
-      #e-lista-alemania{
-        grid-area: alemania;
-      }
-      #e-lista-venezuela{
-        grid-area: venezuela;
-      }
-    .informacion-tour{
-      grid-area: principal;
-      display: none;
     }
-    .tour-default{
-      display: inline-block;
-      background-color: $color-secundario;
-      text-align: center;
-      border: solid black;
-
+    #informacion-principal{
+      grid-area: principal;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      color: $color-subtitulos1;
+      background-color: $color-secundario2;
+      @include estilo-bordes(.25rem,$color-subtitulos);
+      p{
+        padding: 2%;
+        text-align: center;
+        @include titulos-style(2rem)
       }
+      img{
+        @include estilo-bordes(100%,$color-secundario3);
+        width: 18vw;
+        border: solid 1vw $color-secundario3;
+      }
+    }
   }
   footer{
     text-align: center;
+  }
+}
+#tour-mundial{
+  height: auto;
+  @media  screen and (max-width:$breakpoint){
+    header{
+      h1{
+        font-size: 1.5rem;
+      }
+    }
+    main{
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      grid-template-columns: auto;
+      grid-template-rows:auto auto auto;
+      grid-template-areas: 
+      "principal"
+      "aside"
+      "lista"
+      ;
+      row-gap: 0;
+      #lista-de-fechas{
+        flex-flow:row wrap;
+        li{
+          height: auto;
+          width: 49.2%;
+          @include estilo-bordes(0,$color-subtitulos);
+        }
+      }
+    }
   }
 }
