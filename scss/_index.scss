@@ -174,16 +174,20 @@
       }
       #imagen-principal{
         margin: 0;
-        height: 340px;
+        height: 400px;
         width: 100%;
         transition: .5s;
         #titulo-principal{
           font-size: 2rem;
         }
         &:hover{
+          #titulo-principal{
+            bottom: 75%;
+          }
           #descripcion-principal{
-            font-size: 1rem;
+            font-size: 1.2rem;
             font-family: "tilt neon";
+            bottom: 20%;
           }
         }
       }

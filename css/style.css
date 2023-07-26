@@ -208,16 +208,20 @@
   }
   #index #imagen-principal {
     margin: 0;
-    height: 340px;
+    height: 400px;
     width: 100%;
     transition: 0.5s;
   }
   #index #imagen-principal #titulo-principal {
     font-size: 2rem;
   }
+  #index #imagen-principal:hover #titulo-principal {
+    bottom: 75%;
+  }
   #index #imagen-principal:hover #descripcion-principal {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: "tilt neon";
+    bottom: 20%;
   }
   #index #footer-principal {
     display: flex;
