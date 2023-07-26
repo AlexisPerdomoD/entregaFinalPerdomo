@@ -43,8 +43,12 @@
                     @include contactos-elem-style;
                     select{
                         width: 100%;
+                        color: $color-secundario3;
+                        background-color: $color-secundario1;
+                        @include estilo-bordes(.25rem,$color-subtitulos1);
                         option{
                             text-align: center;
+                            
                         }
                     }
                 }
@@ -87,15 +91,21 @@
                 background-color: $color-secundario1;
                 margin: 10px 0;
                 padding: 5px;
-                @include estilo-bordes;
+                color: $color-secundario3;
+                @include estilo-bordes(.25rem,$color-subtitulos1);;
+                &:not(#intro-contactos){
+                    color: $color-subtitulos1;
+                }
                 span{
                     display: block;
                     padding: 5px;
+                    color: $color-subtitulos1;
+                    text-shadow: 0px 0px 5px $color-secundario3;
                     background-color: $color-secundario;
                     font-family:"fasthand";
                     font-size: 1.2rem; 
                 }
-            }
+        }
         }
     }
     footer{
@@ -106,10 +116,9 @@
     @media  screen and (max-width:$breakpoint) {
         main{
             width:100%;
-            transition: all .3s;
             form{
                 padding: 0;
-                height: 400px;
+                height: 500px;
                 grid-template-areas: 
                 "inf-contacto"
                 "mensaje"
@@ -117,24 +126,26 @@
                 grid-template-columns:  100%;
                 grid-template-rows: 55% 35% 10% ;
                 #informacion-contacto{
-                    padding:2vh 0 0 0; 
-                    width:100% ;
+                    padding:2vh 0 0 0;
+                    margin: 0 auto;
+                    width:95%;
+
                     #nombre,#correo-electronico,#localidad,#motivo{
                         input{
-                            @include estilo-bordes(0,$color-subtitulos1);
+                            @include estilo-bordes(.25rem,$color-subtitulos1);
                         }
                     }
                     #motivo{
                         margin: 0 auto;
-                        width: 50%;
+                        width: 80%;
                     }
                 }
                 #mensaje{
-                    margin: 0;
-                    width: 100%;
+                    margin: 0 auto;
+                    width:95%;
                     padding-bottom:  2vh;
                     input{
-                        @include estilo-bordes(0,$color-subtitulos1);
+                        @include estilo-bordes(.25rem,$color-subtitulos1);
                         width: 100%;
                     }
                 }
@@ -154,12 +165,12 @@
                     @include estilo-bordes(0,$color-subtitulos1);
                 }
                 p{
+                    color: $color-secundario3;
                     &:not(#intro-contactos){
                         border: none;
                         margin: 0;
                         span{
-                            display: block;
-                            padding: 5px;
+                            display: block; 
                             border-radius: .25rem;
                         }
                     }

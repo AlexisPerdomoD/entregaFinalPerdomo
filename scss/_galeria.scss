@@ -78,12 +78,17 @@
         column-gap: 1vw;
         row-gap: 1vh;
         justify-content: center;
+        overflow: hidden;
       
         width: 100%;
         img{
           @include estilo-bordes(.25rem,$color-subtitulos);
           width: 100px;
           height: 100px;
+          &:hover{
+            @include animacion-botones(1.1,$color-subtitulos1);
+            opacity: 1;
+          }
         }
       }
       #mostrar-mas-boton{

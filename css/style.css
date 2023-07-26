@@ -325,6 +325,10 @@
 }
 #contactanos main form #informacion-contacto #motivo select {
   width: 100%;
+  color: #BCAAA4;
+  background-color: #8D6E63;
+  border: solid #1f1412 2px;
+  border-radius: 0.25rem;
 }
 #contactanos main form #informacion-contacto #motivo select option {
   text-align: center;
@@ -392,12 +396,18 @@
   background-color: #8D6E63;
   margin: 10px 0;
   padding: 5px;
-  border: solid black 2px;
-  border-radius: 0;
+  color: #BCAAA4;
+  border: solid #1f1412 2px;
+  border-radius: 0.25rem;
+}
+#contactanos main #informacion-de-contacto-banda p:not(#intro-contactos) {
+  color: #1f1412;
 }
 #contactanos main #informacion-de-contacto-banda p span {
   display: block;
   padding: 5px;
+  color: #1f1412;
+  text-shadow: 0px 0px 5px #BCAAA4;
   background-color: #795548;
   font-family: "fasthand";
   font-size: 1.2rem;
@@ -409,35 +419,35 @@
 @media screen and (max-width: 600px) {
   #contactanos main {
     width: 100%;
-    transition: all 0.3s;
   }
   #contactanos main form {
     padding: 0;
-    height: 400px;
+    height: 500px;
     grid-template-areas: "inf-contacto" "mensaje" "enviar";
     grid-template-columns: 100%;
     grid-template-rows: 55% 35% 10%;
   }
   #contactanos main form #informacion-contacto {
     padding: 2vh 0 0 0;
-    width: 100%;
+    margin: 0 auto;
+    width: 95%;
   }
   #contactanos main form #informacion-contacto #nombre input, #contactanos main form #informacion-contacto #correo-electronico input, #contactanos main form #informacion-contacto #localidad input, #contactanos main form #informacion-contacto #motivo input {
     border: solid #1f1412 2px;
-    border-radius: 0;
+    border-radius: 0.25rem;
   }
   #contactanos main form #informacion-contacto #motivo {
     margin: 0 auto;
-    width: 50%;
+    width: 80%;
   }
   #contactanos main form #mensaje {
-    margin: 0;
-    width: 100%;
+    margin: 0 auto;
+    width: 95%;
     padding-bottom: 2vh;
   }
   #contactanos main form #mensaje input {
     border: solid #1f1412 2px;
-    border-radius: 0;
+    border-radius: 0.25rem;
     width: 100%;
   }
   #contactanos main form #imagen {
@@ -456,13 +466,15 @@
     border: solid #1f1412 2px;
     border-radius: 0;
   }
+  #contactanos main #informacion-de-contacto-banda p {
+    color: #BCAAA4;
+  }
   #contactanos main #informacion-de-contacto-banda p:not(#intro-contactos) {
     border: none;
     margin: 0;
   }
   #contactanos main #informacion-de-contacto-banda p:not(#intro-contactos) span {
     display: block;
-    padding: 5px;
     border-radius: 0.25rem;
   }
 }
@@ -597,7 +609,7 @@
     padding: 0;
     height: auto;
     grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 500px auto auto;
     grid-template-areas: "principal" "aside" "lista";
     row-gap: 0;
   }
@@ -607,7 +619,7 @@
   }
   #tour-mundial main #lista-de-fechas li {
     height: auto;
-    min-width: 49%;
+    width: 49%;
     border: solid #3E2723 2px;
     border-radius: 0;
   }
@@ -727,6 +739,7 @@
   column-gap: 1vw;
   row-gap: 1vh;
   justify-content: center;
+  overflow: hidden;
   width: 100%;
 }
 #galeria main #galeria-container img {
@@ -734,6 +747,13 @@
   border-radius: 0.25rem;
   width: 100px;
   height: 100px;
+}
+#galeria main #galeria-container img:hover {
+  scale: 1.1;
+  opacity: 0.75;
+  background-color: #1f1412;
+  transition: all 0.25s;
+  opacity: 1;
 }
 #galeria main #mostrar-mas-boton {
   background-color: #8D6E63;
