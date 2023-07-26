@@ -2,6 +2,7 @@
   font-family: "fasthand",Arial, Helvetica, sans-serif;
   font-size: $escala;
   color: #264d49;
+  text-shadow: 0px 0px 5px $color-secundario1 ;
 }
 @mixin animacion-botones($escala:1.05,$b:s){
   scale:$escala;
