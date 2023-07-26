@@ -4,6 +4,9 @@
   padding: 0;
   margin: 0;
   @include estilo-scrollbar;
+  @media screen and (max-width:$breakpoint) {
+    font-size: 1.20rem;
+  }
 }
 //HEADER INDEX
     #index{
@@ -136,7 +139,6 @@
       #header-index{
         transition: .5s;
         #encabezado{
-          padding: 10px 10vw;
           h1{
             font-size: 2rem;
             transition: .5s;
@@ -173,15 +175,13 @@
       }
       #imagen-principal{
         margin: 0;
-        height: 400px;
+        height: 80%;
         width: 100%;
         transition: .5s;
         #titulo-principal{
           font-size: 2rem;
         }
         &:hover{
-          #titulo-principal{
-          }
           #descripcion-principal{
             font-size: 1.5rem;
             font-family: "tilt neon";

@@ -11,6 +11,11 @@
   background-color: rgba(121, 85, 72, 0.5);
   border-radius: 2rem;
 }
+@media screen and (max-width: 600px) {
+  * {
+    font-size: 1.2rem;
+  }
+}
 
 #index {
   display: flex;
@@ -173,9 +178,6 @@
   #index #header-index {
     transition: 0.5s;
   }
-  #index #header-index #encabezado {
-    padding: 10px 10vw;
-  }
   #index #header-index #encabezado h1 {
     font-size: 2rem;
     transition: 0.5s;
@@ -211,7 +213,7 @@
   }
   #index #imagen-principal {
     margin: 0;
-    height: 400px;
+    height: 80%;
     width: 100%;
     transition: 0.5s;
   }
@@ -593,7 +595,7 @@
   #tour-mundial main {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: auto;
     grid-template-columns: auto;
     grid-template-rows: auto auto auto;
     grid-template-areas: "principal" "aside" "lista";
@@ -601,10 +603,11 @@
   }
   #tour-mundial main #lista-de-fechas {
     flex-flow: row wrap;
+    justify-content: center;
   }
   #tour-mundial main #lista-de-fechas li {
     height: auto;
-    width: 100%;
+    min-width: 49%;
     border: solid #3E2723 2px;
     border-radius: 0;
   }

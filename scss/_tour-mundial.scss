@@ -90,7 +90,7 @@
     main{
       margin: 0;
       padding: 0;
-      height: 100vh;
+      height: auto;
       grid-template-columns: auto;
       grid-template-rows:auto auto auto;
       grid-template-areas: 
@@ -101,9 +101,10 @@
       row-gap: 0;
       #lista-de-fechas{
         flex-flow:row wrap;
+        justify-content: center;
         li{
           height: auto;
-          width: 100%;
+          min-width: 49%;
           @include estilo-bordes(0,$color-subtitulos);
         }
       }
