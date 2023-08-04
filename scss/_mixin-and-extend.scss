@@ -71,6 +71,31 @@
   }
 };
 
+@mixin footer{
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  column-gap: 1vmin;
+  a{
+    text-decoration: none;
+    img{
+      height: 1.2rem;
+    }
+    
+  }
+  @media screen and (max-width:$breakpoint) {
+    flex-wrap: wrap;
+    text-align: center;
+    column-gap: 3vmin;
+    margin: 1vh 0;
+    p{
+      font-size: 1rem;
+    }
+          
+  }
+
+}
+
 @mixin contactos-elem-style($height:85%,$width:100%){
   display: flex; 
   justify-content: center;

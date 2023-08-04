@@ -10,132 +10,134 @@
 }
 //HEADER INDEX
     #index{
-        display: flex;
-        flex-flow: column nowrap;
+        height: 100vh;
+        display: grid;
+        grid-column: auto;
+        grid-row: auto 80vh auto;
+        grid-template-areas: 
+        "header"
+        "principal"
+        "footer";
+        background-color: $color-secundario3;
         #header-index{
-            display: flex;
+          grid-area: header;
+          display: flex;
             flex-flow: column wrap;
             #encabezado{
-                display: flex;
-                flex-wrap: nowrap;
-                align-items: center;
-                justify-content: center;
-                column-gap:2vw;
-                padding: 10px;
-                background-color: $color-principal;
-                transition: .5s;
-                img{
-                  width: 100px;
+              display: flex;
+              flex-wrap: nowrap;
+              align-items: center;
+              justify-content: center;
+              column-gap:2vw; 
+              padding: 10px;
+              background-color: $color-principal;
+              transition: .5s;
+              img{
+                  width: 60px;
                   border: solid $color-secundario3;
                   border-radius: 100%;
                 }
                 h1{
-                  @include titulos-style(4rem);
+                  @include titulos-style(2rem);
                 }
                 }
             
             #nav-principal{
                 @include nav-style;
             }
-            #reproductor{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: .5vh;
-                column-gap: .25rem;
-                scale: .7;
-                #botones{
-                    background-color:$color-subtitulos;
-                    border: $color-secundario3 solid;
-                    padding: .125rem 1rem;
-                    border-radius: .5rem;
-                    input{
-                      color:$color-subtitulos1;
-                      background-color:$color-secundario3;
-                      padding: 2px;
-                      border-radius: .5rem;
-
-                    }
-                  }
-                  #reproduciendo{
-                    background-color: $color-secundario2;
-                    border: $color-secundario1 solid;
-                    padding: .25rem;
-                  }
-            }
           }
           //MAIN INDEX
-          #imagen-principal{
-            position: relative;
-            height: 320px;
-            width: 800px;
-            margin: 0 auto;
-            transition: .5s;
-            &:hover{
-              img{
-                filter: blur(2px);
-                border-radius: .5rem;
-                opacity: 80%;
-              }
-              #caption-principal{
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 50%;
-                left: 50%;
-                transform: translate( -50%, -50%);
-              }
-              #titulo-principal{
-                position: unset;
-                font-size: 2.5rem;
-                
-              }
-              #descripcion-principal{
-                display: inline-block;
-                font-weight: bold;
-                @include titulos-style(1.7rem);
-                color:$color-principal;
+          main{
+          grid-area: principal;
+          height: 100%;
+          display:flex;
+          flex-wrap: wrap;
+          #reproductor{
+            width: 100%;
+            display: flex;
+            #botones{
+              width: 45%;
+              margin: 1% 2.5%;
+              list-style: none;
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: center;
+              
+              align-content: center;
+              column-gap: 0;
+              background-color: $color-secundario2;
+              @include estilo-bordes(.5rem,$color-subtitulos);
+              li{
+                list-style: none;
+                padding: 1vh 1vw;
+                &:hover{
+                  @include animacion-botones;
+                }
+                img{
+                  vertical-align: middle;
+                  height: 1.7rem;
+                }
               }
             }
+            #reproduciendo{
+              width: 45%;
+              margin: 1% 2.5%;
+              background-color: $color-secundario1;
+              @include estilo-bordes(0,$color-subtitulos);
+              color: $color-secundario3;
+              text-align: center;
+            }
+
+          }
+          #imagen-principal{
+            position: relative;
+            height: 62vh;
+            width: 95%;
+            margin: 0 auto;
+            background-color: $color-subtitulos;
+            @include estilo-bordes(.25rem,$color-subtitulos1);
             img{
               width: 100%;
               height: 100%;
-              background-color: $color-secundario3;
-              
+              opacity: 0.4;
             }
             #titulo-principal{
-              display: flex;
-                position: absolute;
-                bottom: 0;
-                justify-content: center;
-                width: 100%;
-                @include titulos-style(2.5rem)
+              position: absolute;
+              right: 50%;
+              top: 90%;
+              transform: translate(50%,-50%);
+              @include titulos-style(3rem);
+            }
+            #descripcion-principal{
+              position: absolute;
+              top: 25%;
+              right: 10%;
+              left: 10%;
+              transform: translate(10%,-10%);
+              @include titulos-style(2.5rem);
+              font-family: "tilt neon", Verdana, Geneva, Tahoma, sans-serif;
+              color:#6e2d16;
+              text-shadow: $color-secundario3 0 0 10px;
+              span{
+                font-size: 3rem;
+                color: $color-subtitulos1;
               }
-              #descripcion-principal{
-                  display: none;
-                  text-align: center;
-                  width: 100%;
-                  text-shadow: 0px 0px 5px $color-secundario3 ;
-                  }
-              }
+            }
+          }
+
+        }
+              
 //FOOTER INDEX 
               #footer-principal{
-                display: flex;
-                column-gap: 1rem;
-                justify-content:center;
-                a{
-                  text-decoration: none;
-                  img{
-                    height: 1rem;
-                  }
-                  
-                }
-
+                @include footer;
               }
             }
 #index{
+ 
   margin: 0;
-    @media screen and (max-width: $breakpoint){  
+    @media screen and (max-width: $breakpoint){ 
+      height:auto;
+      grid-row: auto auto auto;
       #header-index{
         transition: .5s;
         #encabezado{
@@ -147,50 +149,40 @@
             width: 70px;
           }
         }
-        #reproductor{ 
-          scale: 1  ;
-          display: block;
-          margin: 0;
-          padding: 0;
+      }
+      main{
+        #reproductor{
+          flex-wrap: wrap;
           #botones{
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            border:none;
-            border-radius: 0;
             width: 100%;
-            input{
-              width: 20%;
-              background-color: $color-secundario1;
-              @include estilo-bordes(1rem);
-              padding: 5px 0;
-              margin: 1px 0;
-              color: $color-subtitulos;
-            }
+            justify-content: space-around;
+            margin: 1vh 2.5%;
           }
           #reproduciendo{
+            width: 100%;
+            margin: 1vh 0;
+          }
+        }
+        #imagen-principal{
+          width: 100%;
+          max-width: 1500px;
+          height:unset ;
+          #titulo-principal{
+            width: 100%;
             text-align: center;
+            transform:translateX(50%);
+              font-size: 2rem;
           }
-        }
-      }
-      #imagen-principal{
-        margin: 0;
-        height: 80%;
-        width: 100%;
-        transition: .5s;
-        #titulo-principal{
-          font-size: 2rem;
-        }
-        &:hover{
           #descripcion-principal{
-            font-size: 1.5rem;
-            font-family: "tilt neon";
+            width: 100%;
+            text-align: center;
+            top: 5%;
+              left: 0%;
+              transform: translate(0,0);
           }
         }
+        
+
       }
-    #footer-principal{
-      display: flex;
-      justify-content: center;
-    }
   }
 }
