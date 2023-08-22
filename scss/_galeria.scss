@@ -8,7 +8,7 @@
   main{
     display: grid;
     margin-top: 5vh;
-    grid-template-columns: 90vw;
+    grid-template-columns: auto;
     grid-template-rows: auto auto auto;
     grid-template-areas: 
     "imagen-actual"
@@ -21,11 +21,11 @@
         display: flex;
         justify-content: center ;
         position: relative;
-        margin: 0 25%;
+        margin: 0 auto;
         img{
           @include estilo-bordes(.25rem,$color-subtitulos);
-          width: 50vw;
-          height: 50vh;
+          width: 70vw;
+          height: 70vh;
         }
         #ampliar-boton{
           position: absolute;
@@ -73,23 +73,28 @@
       }
       #galeria-container{
         grid-area: container-galeria;
-        display: flex;
-        flex-flow: row wrap;
-        column-gap: 1vw;
-        row-gap: 1vh;
-        justify-content: center;
-        overflow: hidden;
-      
-        width: 100%;
-        img{
-          @include estilo-bordes(.25rem,$color-subtitulos);
-          width: 100px;
-          height: 100px;
-          &:hover{
-            @include animacion-botones(1.1,$color-subtitulos1);
-            opacity: 1;
+        background-color: $color-fondo-oscuros;
+        width:100%;
+        
+        div{
+          padding: 1vmax;
+          display: flex;
+          flex-flow: row wrap;
+          column-gap: .1vmin;
+          row-gap: .1vmin;
+          justify-content: center;
+          img{
+            @include estilo-bordes(.25rem,$color-subtitulos);
+            width: 150px;
+            height: 150px;
+            &:hover{
+              @include animacion-botones(1.2,$color-subtitulos1);
+              opacity: 1;
+              z-index: 800;
+            }
           }
         }
+        
       }
       #mostrar-mas-boton{
         background-color: $color-secundario1;

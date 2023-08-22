@@ -15,11 +15,12 @@
       display: flex;
       flex-wrap: wrap;
       width: 80vw;
-      height: 62.8vh;
+      height: auto;
       overflow-y:scroll;
       background-color: $color-secundario1;
       margin: 0 auto;
       padding: 0 1vw;
+      overflow-y: scroll;
       
       @include estilo-scrollbar;
       .comentario-experiencia{
@@ -44,6 +45,8 @@
     }
     #formulario-comentario-nuevo{
       background-color: $color-principal;
+      position: sticky;
+      bottom: 0;
       margin: 0 1vw;
       padding: 1vh 1vw;
       display: flex;

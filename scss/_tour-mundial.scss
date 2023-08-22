@@ -24,12 +24,25 @@
     "aside principal"
     "lista principal";
     #informacion-complementaria{
-      grid-area: aside;
-      background-color: $color-secundario;
+      
+      background-color: $color-secundario1;
       @include estilo-bordes(.25rem,$color-subtitulos);
       p{
-        padding: 2%;
-        text-justify:inter-word;
+        padding:0  1vmin;
+        text-align:justify;
+      }
+      #informacion-complementaria-default{
+        color: $color-subtitulos1;
+      }
+      .contacto{
+        padding: 0  .5vmin;
+        margin: 0 1vmin;
+        color: $color-subtitulos1;
+        text-shadow: 0px 0px 5px $color-secundario3;
+        background-color: $color-secundario;
+        border-radius: .25rem;
+        font-family:"fasthand";
+        font-size: 1rem;
       }
     }
     #lista-de-fechas{
@@ -57,22 +70,44 @@
     #informacion-principal{
       grid-area: principal;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      color: $color-subtitulos1;
+    div{
+      display: grid;
+      padding: 0 5vmin;
+      grid-template-columns: repeat(3,auto);
+      grid-template-rows: repeat(4,auto);
+      grid-template-areas: 
+      "titulo titulo titulo"
+      "descrip descrip descrip"
+      "descrip descrip descrip"
+      "img img img"
+      ;
       background-color: $color-secundario2;
       @include estilo-bordes(.25rem,$color-subtitulos);
       p{
-        padding: 2%;
         text-align: center;
-        @include titulos-style(2rem)
+        @include titulos-style(1.5rem);
+        padding: 0 1vmin;
+        font-family: "tilt neon",Verdana, Geneva, Tahoma, sans-serif;
+      }
+      #informacion-principal-default{
+        grid-area: titulo;
+        text-align: center;
+
+        @include titulos-style(2rem);
+        padding: 0 1vmin;
+      }
+      #descripcion-evento{
+        grid-area:descrip;
       }
       img{
-        @include estilo-bordes(100%,$color-secundario3);
-        width: 18vw;
-        border: solid 1vw $color-secundario3;
+        grid-area: img;
+        @include estilo-bordes(.25rem,$color-secundario3);
+        width: 40vmin;
+        height: 95%;
+        margin-bottom: 1vmin ;
+        margin: 0 auto;
       }
+    }
     }
   }
   footer{
